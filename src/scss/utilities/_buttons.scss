@@ -1,0 +1,97 @@
+// @use "@scss/abstracts/breakpoints-mixins" as *;
+// @use "@scss/abstracts/variables" as *;
+// @use "@scss/abstracts/placeholders" as *;
+//
+// $button-border-width: 2px;
+// $button-bg-transition: 0.3s ease-in-out;
+//
+// .btn-primary,
+// .btn-secondary {
+//     display: flex;
+//     border-radius: 3.125rem;
+//     border-width: $button-border-width;
+//     border-style: solid;
+//
+//     justify-content: center;
+//     align-items: center;
+//     padding: 0 1rem;
+//     gap: 0.5rem;
+//     width: fit-content;
+//     height: 2.5rem !important;
+//     text-wrap: nowrap;
+//     color: white !important;
+//     font-weight: 500;
+//     margin-bottom: 0 !important;
+//     transition: $button-bg-transition;
+//
+//     @include breakpoint(med) {
+//         height: 3rem !important;
+//         padding: 0 1.5rem;
+//     }
+// }
+//
+// .btn-primary {
+//     border-color: #A0D4DD;
+//     background: url("https://vrwpaviv.elementor.cloud/wp-content/uploads/2025/01/bg-button-btn-primary-teal.webp") center / 150% auto no-repeat;
+//     // background: url('https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/btn-primary-button-bg.png') no-repeat center center / cover;
+//
+//     &:hover {
+//         border-color: white;
+//         background: url("https://vrwpaviv.elementor.cloud/wp-content/uploads/2025/01/button-white-chalk-bg.webp") center / 110% auto no-repeat;
+//     }
+//
+//     &:active {
+//         border: 2.5px solid #00798d;
+//         background: linear-gradient(0deg,
+//                 rgba(0, 165, 176, 0.3) 0%,
+//                 rgba(0, 165, 176, 0.3) 100%),
+//             url(https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/btn-primary-button-bg-hover-image-only-min.png) 50% / cover no-repeat;
+//     }
+//
+//     &:visited {
+//         background: url(https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/btn-primary-button-bg.png) 50% / cover no-repeat;
+//         color: white;
+//     }
+// }
+//
+// a {
+//     cursor: pointer;
+//
+//     a:hover {
+//         color: white;
+//     }
+// }
+//
+//
+// .btn-secondary {
+//     border-color: white !important;
+//     background: transparent;
+//
+//     &:hover {
+//         border-color: #00798d;
+//         background-color: #cce2e6;
+//         color: #00798d;
+//     }
+//
+//     &:active {
+//         border-color: var(--dark-teal);
+//         background: var(--teal-background);
+//         color: var(--dark-teal);
+//     }
+// }
+//
+// .bgBlack {
+//     background: $off-black !important;
+//     border: 0;
+//     background-image: url('https://vrwpaviv.elementor.cloud/wp-content/uploads/2025/02/bg-button-black-chalk.webp');
+//     background-size: 100% 100%;
+//     background-repeat: no-repeat;
+//
+//     &:hover {
+//         background-color: white !important;
+//     }
+// }
+//
+// .buttons-container {
+//     @extend %buttons-container;
+// }

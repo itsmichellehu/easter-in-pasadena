@@ -1,0 +1,80 @@
+@use "@scss/abstracts/all-abstracts" as *;
+
+.section {
+    padding: $section-padding-base 0;
+    width: 100%;
+
+    @include breakpoint(med) {
+        padding: $section-padding-med 0;
+    }
+
+    @include breakpoint(lg) {
+        padding: $section-padding-lg 0;
+    }
+
+    //
+    //   @include breakpoint(lg) {
+    //     padding: 8rem 0;
+    //   }
+}
+
+.page-intro {
+    margin: auto;
+    margin-top: 2rem;
+    @extend %section-content-width;
+}
+
+.page-intro__text {
+    font-size: 1.125rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.section-content {
+    margin: 0 auto;
+    width: min($max-content-width, $content-max-width);
+}
+
+.section-header {
+    display: inline-block;
+    margin-bottom: 0;
+    position: relative;
+
+    h2 {
+        color: #FFF3DB;
+        text-align: center;
+        font-size: 2.375rem;
+        font-weight: 700;
+        line-height: 100%;
+        text-transform: uppercase;
+        margin: 0 auto; // Removes default margins for better spacing
+
+        @include breakpoint(med) {
+            font-size: 3.5rem;
+            letter-spacing: -1px;
+        }
+
+        @include breakpoint(xl) {
+            font-size: 4.5rem;
+        }
+    }
+
+    @include breakpoint(med) {
+        margin-bottom: 2rem;
+    }
+
+}
+
+// Used to create a paper-like background for content sections
+.bg-paper-container {
+    background: url(https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/card-paper-bg.webp) no-repeat;
+    background-size: 100% 100%;
+    border-radius: .5rem;
+    box-shadow: 0 0 1rem rgba(30, 30, 30, .1);
+    margin: 1.5rem 0 2rem;
+    padding: 1.5rem;
+}
+
+ul.form-section {
+    padding: 0 !important;
+}

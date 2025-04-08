@@ -1,0 +1,39 @@
+.rotate180 {
+    transform: rotate(180deg);
+}
+
+.rotate-180 {
+    transform: rotate(-180deg);
+}
+
+.scaleX1 {
+    transform: scaleX(1);
+}
+
+.scale105 {
+    transform: scale(1.05);
+}
+
+.scaleX2 {
+    transform: scaleX(2);
+}
+
+.scaleX3 {
+    transform: scaleX(3);
+}
+
+.scaleXNeg1 {
+    transform: scaleX(-1);
+}
+
+.scaleXNeg2 {
+    transform: scaleX(-2);
+}
+
+.scaleXNeg3 {
+    transform: scaleX(-3);
+}
+
+.transformNone {
+    transform: none;
+}

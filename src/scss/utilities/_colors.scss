@@ -1,0 +1,76 @@
+@use "@scss/abstracts/variables" as *;
+
+// Brand colors
+.primary-teal {
+	color: $primary-teal !important;
+}
+
+//
+// .primary-bg {
+// 	color: $primary-bg !important;
+// }
+
+// Greyscale
+.white {
+	color: white !important;
+}
+
+.pure-black {
+	color: black !important;
+}
+
+.paper-ink-black {
+	color: $paper-ink-black !important;
+}
+
+.black {
+	color: $black !important;
+}
+
+.sub-grey {
+	color: $sub-grey !important;
+}
+
+.off-black {
+	color: $off-black !important;
+}
+
+.dark-grey {
+	color: $dark-grey !important;
+}
+
+.medium-grey {
+	color: $medium-grey !important;
+}
+
+.lightest-grey {
+	color: $lightest-grey !important;
+}
+
+.medium-light-grey {
+	color: $medium-light-grey !important;
+}
+
+.light-grey {
+	color: $light-grey !important;
+}
+
+.invalid-red {
+	color: $invalid-red !important;
+}
+
+.link-blue {
+	color: #0281e3;
+}
+
+.emphasis {
+	color: $emphasis !important;
+}
+
+.emphasis-blue {
+	color: $emphasis-blue !important;
+}
+
+.transparent {
+	color: transparent !important;
+}

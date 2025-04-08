@@ -1,0 +1,136 @@
+@use "./abstracts/all-abstracts";
+@use "./base/all-base";
+@use "./utilities/all-utilities";
+@use "./components/all-components";
+
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.hero {
+    background: linear-gradient(135deg, #d16ba5, #86a8e7, #5ffbf1);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+
+    &__overlay {
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 40px;
+        border-radius: 12px;
+        display: inline-block;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    &__subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    &__buttons .btn {
+        margin: 10px;
+    }
+}
+
+.expect {
+    padding: 60px 20px;
+    text-align: center;
+
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    &__item {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        background: #f4f4f4;
+        border-radius: 8px;
+    }
+}
+
+.rsvp {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
+
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        margin: 0 auto;
+
+        input, label, button {
+            margin-bottom: 15px;
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            background: #5ffbf1;
+            color: #000;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+.scripture {
+    padding: 60px 20px;
+    text-align: center;
+
+    blockquote {
+        font-size: 1.5rem;
+        font-style: italic;
+        color: #555;
+    }
+
+    &__cta {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        color: #444;
+    }
+}
+
+.btn {
+    &--primary {
+        background: white;
+        color: #333;
+        padding: 10px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    &--secondary {
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px solid white;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,44 @@
+// Responsive font sizes for utilities and mixins
+@use "breakpoints-mixins" as *;
+@use "sass:map";
+// Explanation
+// The $font-scale variable is a map of font sizes for different breakpoints. The @each loop iterates over each key-value pair in the map and generates a CSS class for each key. The font-size property is set to the value of the 'mobile-sm' key in the map, which corresponds to the base font size for the mobile breakpoint. Inside the loop, another @each loop iterates over the remaining key-value pairs in the map and generates a media query for each breakpoint, setting the font size to the corresponding value. This allows for responsive font sizes to be easily defined and applied using the generated utility classes.
+
+// Usage
+// .font-md in HTML or @include font-size('md') in SCSS
+$font-scale: (
+	"sm": (
+		"mobile-sm": 0.875rem,
+		"med": 1rem,
+		"lg": 1.125rem
+	),
+	"base": (
+		"mobile-sm": 1rem,
+		"med": 1.125rem,
+		"lg": 1.25rem
+	),
+	"md": (
+		"mobile-sm": 1.125rem,
+		"med": 1.25rem,
+		"lg": 1.5rem
+	),
+	"lg": (
+		"mobile-sm": 1.25rem,
+		"med": 1.5rem,
+		"lg": 1.75rem
+	)
+);
+
+@each $label, $scale in $font-scale {
+	.font-#{$label} {
+		font-size: map.get($scale, "mobile-sm"); // base (mobile)
+
+		@each $bp, $size in $scale {
+			@if $bp != "mobile-sm" {
+				@include breakpoint($bp) {
+					font-size: $size;
+				}
+			}
+		}
+	}
+}

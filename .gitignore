@@ -1,0 +1,74 @@
+# 🔹 Ignore Backup Files, Logs, and SQL Dumps
+*.log
+*.sql
+*.tar.gz
+*.zip
+*.gz
+
+# 🔹 Ignore Node.js Dependencies
+node_modules/
+
+# 🔹 Ignore OS and System Files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+cloudflare.yml
+
+# 🔹 Ignore Debugging & Cache Files
+local-xdebuginfo.php
+debug.log
+wflogs/
+
+# 🔹 Ignore Package Lock Files
+composer.lock
+
+# 🔹 Ignore Webpack Debug Files
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# 🔹 Ignore All-in-One WP Migration Backup Files
+app/public/wp-content/ai1wm-backups/
+
+# 🔹 Ignore WordPress Cache Files
+app/public/wp-content/cache/
+
+# 🔹 Ignore Configuration Files
+conf/
+
+# 🔹 Ignore Environment Files (If Used)
+.env
+.env.local
+.htaccess.bk
+.htaccess
+*.css.map
+*.min.css.map
+runtime.min.js
+runtime.min.js.map
+*.min.js.map
+
+test.js
+
+wp-image-optimizer/local/compressed/*
+wp-image-optimizer/local/originals/*
+wp-image-optimizer/local/webp/*
+wp-image-optimizer/local/input/*
+wp-image-optimizer/originals/*
+wp-image-optimizer/webp/*
+wp-image-optimizer/input/*
+wp-image-optimizer/output/*
+wp-image-optimizer/uploaded/*
+
+test.css
+test.html
+dist/
+/psd/
+src/assets/svg/content.png
+src/assets/svg/fire-relief-progress.png
+src/assets/svg/wrapper.png
+wp-image-optimizer/config.js
+wp-image-optimizer/local-image-optimizer.js
+wp-image-optimizer/README.md
+wp-image-optimizer/wp-image-optimizer.js
+wp-image-optimizer/wp-image-uploader.js

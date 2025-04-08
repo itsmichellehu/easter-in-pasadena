@@ -1,0 +1,45 @@
+@use "@components/Accordion/Accordion" as *;
+
+.serve-teams-list {
+    margin: 0 0 2rem 0;
+    background: url(https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/card-paper-bg.webp) no-repeat;
+    border-radius: .5rem;
+    box-shadow: 0 0 1rem rgba(30, 30, 30, .1);
+    padding: 1.5rem;
+    width: 100%;
+    background-size: 100% 100%;
+    max-height: 24rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .chalk-divider {
+        height: 0.5rem;
+        margin: auto;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        width: 105%;
+        background-image: url('https://vrwpaviv.elementor.cloud/wp-content/uploads/2025/02/black-chalk-line-divider.webp');
+        opacity: 0.9;
+        transform: rotate(180deg);
+    }
+}
+
+.teamsCTA {
+    margin-bottom: 2rem;
+}
+
+//
+// #serve-teams-accordions {
+//     .accordion:first-child {
+//         border-top: $accordion-border;
+//     }
+// }

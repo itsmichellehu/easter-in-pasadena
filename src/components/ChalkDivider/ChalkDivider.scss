@@ -1,0 +1,25 @@
+// @use "abstracts/breakpoints-mixins" as *;
+// @use "abstracts/variables" as *;
+//
+// .chalk-divider {
+//     width: 100%;
+//
+//     @include breakpoint(med) {
+//         height: 0.75rem;
+//     }
+//
+//     @include breakpoint(lg) {
+//         height: 1rem;
+//     }
+// }
+//
+// .black-chalk-divider {
+//     background-image: url('https://vrwpaviv.elementor.cloud/wp-content/uploads/2025/02/chalk-divider-black.webp');
+// }
+//
+// .white-chalk-divider {
+//     background: url('https://vrwpaviv.elementor.cloud/wp-content/uploads/2025/01/chalk-underline_single-02_white.webp');
+//     background-size: 105% 100%;
+//     border-radius: 1rem;
+//     overflow: hidden;
+// }

@@ -1,0 +1,47 @@
+@use "@scss/abstracts/all-abstracts" as *;
+
+// image.scss
+.img-width-1200 {
+    width: 90%;
+    max-width: 1200px;
+}
+
+// Responsive image
+.img-responsive {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+// Centered image
+.img-centered {
+    display: block;
+    margin: 0 auto;
+}
+
+// Rounded image
+.img-with-radius {
+    // 3px
+    border-radius: 0.1875rem;
+}
+
+// Circle image
+.img-circle {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+// Border around image
+.img-bordered {
+    border: 1px solid $light-grey;
+}
+
+// Grayscale image
+.img-grayscale {
+    filter: grayscale(100%);
+}
+
+// Sepia image
+.img-sepia {
+    filter: sepia(100%);
+}

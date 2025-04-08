@@ -1,0 +1,270 @@
+@use "@scss/abstracts/variables" as *;
+@use "@scss/abstracts/breakpoints-mixins" as *;
+@use "@scss/abstracts/placeholders" as *;
+
+// -----------------------------------
+// Typography Utilities
+// -----------------------------------
+
+.link-underlined {
+  line-height: 100%;
+  text-decoration: underline;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.big-type {
+  color: white;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -0.02875rem;
+  text-align: left;
+  text-transform: none;
+}
+
+// Font weight utilities
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-550 {
+  font-weight: 550;
+}
+
+.fw-600,
+.fw-semibold,
+.bold {
+  font-weight: 600;
+}
+
+.fw-bold {
+  font-weight: 600 !important;
+}
+
+.fw-normal {
+  font-weight: 400;
+}
+
+.fw-medium {
+  color: $black;
+  font-weight: 500;
+}
+
+// Font-size utilities
+.fz-20 {
+  font-size: 1.25rem;
+}
+
+.text-small {
+  font-size: 1rem;
+}
+
+// Text decoration and transform utilities
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.text-transform-none {
+  text-transform: none;
+}
+
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.line-height-100 {
+  line-height: 100%;
+}
+
+// -----------------------------------
+// Font Families and Specific Text Styles
+// -----------------------------------
+
+// Font family: Noto Serif
+.noto-serif {
+  font-family: "Noto Serif", serif;
+  color: $black;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 160%; // 28.8px
+}
+
+.quote-text {
+  font-family: "Noto Serif", serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 3%;
+  line-height: 160%;
+  color: $black;
+  font-size: 1rem;
+  margin: 0;
+  overflow-wrap: normal;
+}
+
+.notes {
+  color: #00bdd6;
+  font-family: "Noto Serif", sans-serif;
+}
+
+// Font family: Source Code Pro
+.source-code-pro {
+  font-family: "Source Code Pro", monospace !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+
+  &-300 {
+    font-weight: 300;
+  }
+
+  &-500 {
+    font-weight: 500;
+  }
+}
+
+.subheader {
+  font-family: "Source Code Pro", monospace;
+  color: $medium-grey;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 125%;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  height: fit-content;
+}
+
+// -----------------------------------
+// Reusable Headings and Subheadings
+// -----------------------------------
+
+// Tab content subheading
+.subheading {
+  @extend %subheading;
+}
+
+// Section subheading with additional styles
+.section-subheading {
+  @extend %subheading;
+  font-size: 1.5rem;
+  color: #28746f;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: left;
+
+  &.small {
+    font-size: 1.25rem;
+    color: $black;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+}
+
+// -----------------------------------
+// Specific Text Styles with Breakpoints
+// -----------------------------------
+
+// Secondary text styles
+.secondary-text {
+  color: $black;
+  font-size: 1.415rem;
+  font-weight: 500;
+  line-height: 135%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  @include breakpoint(med) {
+    font-size: 1.728rem;
+    margin-bottom: 1.5rem;
+    line-height: 145%;
+  }
+}
+
+.secondary-text.small {
+  color: $black;
+  font-size: 1.424rem;
+  font-weight: 500;
+  line-height: 115%;
+  margin-bottom: 1rem;
+  letter-spacing: 0rem;
+}
+
+// Adjust font-size for secondary text on medium screens
+@include breakpoint(med) {
+  .secondary-text {
+    font-size: 1.665rem;
+  }
+}
+
+// -----------------------------------
+// Text Alignment Utilities
+// -----------------------------------
+
+.text-align-center,
+.text-center {
+  text-align: center !important;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-left {
+  text-align: center;
+}
+
+// -----------------------------------
+// Span-specific Styles
+// -----------------------------------
+
+// Medium-weight text inside a <span>
+.span-fw-medium {
+  span {
+    color: $black;
+    font-weight: 500;
+  }
+}
+
+.span-fw-medium-white {
+  span {
+    color: white;
+    font-weight: 500;
+  }
+}
+
+.text-wrap {
+  text-wrap: wrap !important;
+}
+
+.text-nowrap {
+  text-wrap: nowrap !important;
+}
+
+.text-wrap-word {
+  text-wrap: wrap-word !important;
+}

@@ -1,0 +1,47 @@
+@use "@scss/abstracts/all-abstracts" as *;
+
+.card {
+    overflow: hidden;
+    border-radius: 0.125rem;
+    align-self: stretch;
+    margin: auto;
+    scroll-snap-align: center;
+
+    position: relative;
+    text-decoration: none !important;
+
+    .card-image {
+        width: 100%;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        aspect-ratio: 3/2;
+        object-fit: cover;
+
+        @include breakpoint(med) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .card-content {
+        flex-grow: 1;
+    }
+
+    .card-headline {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 135%;
+        letter-spacing: -0.015rem;
+        margin-top: 0;
+        text-transform: none;
+    }
+
+    .card-body {
+        display: flex;
+        flex-grow: 1;
+        color: white !important;
+    }
+
+    .btn-primary {
+        margin-bottom: 0;
+    }
+}

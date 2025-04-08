@@ -1,0 +1,65 @@
+@use "@scss/abstracts/variables" as *;
+
+@mixin pseudo-underline($underline-color, $underline-height: 2px, $position-bottom: 0) {
+    position: relative;
+    margin-bottom: 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: $position-bottom;
+        width: 0;
+        height: $underline-height;
+        background-color: $underline-color;
+        transition: width 0.3s ease-in-out;
+    }
+}
+
+@mixin hover-target-color($target-class, $hover-color) {
+    &:hover #{$target-class} {
+        color: $hover-color !important;
+        transition: color 0.3s ease-in-out;
+    }
+}
+
+
+@mixin hover-scale($scale-hover: 1.02, $scale-active: 1) {
+    &:hover {
+        transform: scale($scale-hover);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover:active {
+        transform: scale($scale-active);
+    }
+}
+
+@mixin hover-underline-self($text-underline-color, $underline-height: 2px, $scale-hover: 1.01, $scale-active: 1) {
+    @include pseudo-underline($text-underline-color, $underline-height);
+    @include hover-scale($scale-hover, $scale-active);
+
+    &:hover::before {
+        width: 100%;
+    }
+
+    @content;
+}
+
+@mixin hover-underline-target($target-class,
+    $hover-text-color: $dark-grey,
+    $underline-color: $dark-grey,
+    $underline-height: 2px,
+    $scale-hover: 1.02,
+    $scale-active: 1) {
+    #{$target-class} {
+        @include pseudo-underline($underline-color, $underline-height);
+    }
+
+    @include hover-target-color($target-class, $hover-text-color);
+    @include hover-scale($scale-hover, $scale-active);
+
+    &:hover #{$target-class}::before {
+        width: 100%;
+    }
+}

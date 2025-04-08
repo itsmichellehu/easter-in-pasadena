@@ -1,0 +1,42 @@
+@use "@scss/abstracts/breakpoints-mixins" as *;
+
+.scroll-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+    white-space: nowrap;
+    align-self: start;
+    overflow-x: scroll; // Enables horizontal scrolling
+    scroll-snap-type: x mandatory; // Snaps cards into place
+    scrollbar-width: none; // Hide scrollbar in Firefox
+    -ms-overflow-style: none; // Hide scrollbar in IE/Edge
+
+    &::-webkit-scrollbar {
+        display: none; // Hide scrollbar in Chrome/Safari
+    }
+}
+
+.scroll-items-wrapper {
+    display: flex;
+    gap: 1rem;
+    width: fit-content;
+    max-width: none;
+}
+
+.scroll-item-card {
+    width: 85vw !important; // Each card takes up 80% of the viewport width
+    max-width: 27.5rem; // Set max width for larger screens
+    scroll-snap-align: start; // Aligns each card when scrolling
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}

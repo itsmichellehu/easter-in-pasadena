@@ -1,0 +1,59 @@
+// This file contains utility classes for web accessibility.
+// It includes classes for screen readers and other assistive technologies.
+// These classes are used to improve the accessibility of web applications.
+
+/* Screen reader only */
+// ✅ Use this when you want content hidden visually but still announced by screen readers.
+// 📍 Example: Form labels, extra descriptions, hidden headings.
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Screen reader only, but visible when focused or active */
+// ✅ Great for skip links ("Skip to main content") that only show up when a keyboard user tabs into them.
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Optional duplicate of sr-only if you prefer naming it this way */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+// Use when you want to hide content from screen readers, but keep it visible on screen.
+// 📍 Example: Decorative text, icons with redundant labels.
+
+/* Hidden from visual view but still takes up layout space */
+.invisible {
+  visibility: hidden;
+}
+
+/* Completely hidden — not visible or accessible */
+.hidden {
+  display: none !important;
+}
+
+/* Utility class for screen reader announcements should be applied as an HTML attribute, not CSS. */
+

@@ -1,0 +1,58 @@
+@use 'abstracts/variables' as *;
+
+.addToCalendar {
+  margin: 1rem 0;
+}
+
+.addToCalendarButton {
+  //   display: flex;
+  //   padding: 0.5rem 1rem;
+  //   align-items: center;
+  //   background-color: #f9f9f9 !important;
+  //   color: $off-black;
+  //   text-decoration: none;
+  //   border-radius: 5rem;
+  //   transition: background 0.3s;
+  margin-bottom: 1rem;
+}
+
+span.addToCalendarText,
+getDirectionsButton {
+  text-wrap: nowrap;
+}
+
+.addToCalendarButton:hover {
+  background-color: #0056b3;
+}
+
+.calendarIcon {
+  margin-right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.calendarDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  z-index: 100;
+}
+
+.calendarDropdown a {
+  text-decoration: none;
+  color: $black;
+  padding: 8px 12px;
+  display: block;
+}
+
+.calendarDropdown a:hover {
+  background-color: #f1f1f1;
+}

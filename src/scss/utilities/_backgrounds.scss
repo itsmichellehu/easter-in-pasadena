@@ -1,0 +1,71 @@
+@use "@scss/abstracts/variables" as *;
+
+.texture-overlay {
+    position: absolute;
+    /* Position it over the whole page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/bg-texture-scaled.webp');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    opacity: 0.75;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.bg-paper {
+    background: $paperBackgroundImage;
+    background-size: 100% 100%;
+}
+
+// Background colors
+.bg- {
+    &-transparent {
+        background-color: transparent !important;
+    }
+
+    &black {
+        background-color: $black !important;
+    }
+
+    &off-black {
+        background-color: $off-black !important;
+    }
+
+    &light-grey {
+        background-color: $light-grey !important;
+    }
+
+    &light-medium-grey {
+        background-color: $light-medium-grey !important;
+    }
+
+    &lightest-grey {
+        background-color: $lightest-grey !important;
+    }
+
+    &medium-grey {
+        background-color: $medium-grey !important;
+    }
+
+    &medium-light-grey {
+        background-color: $medium-light-grey !important;
+    }
+
+    &dark-grey {
+        background-color: $dark-grey !important;
+    }
+
+    &white {
+        background-color: white !important;
+    }
+
+    // To apply a darkened background to sections or containers
+    // The class sets a dark background color and ensures text contrast remains readable.
+    &darken {
+        background-color: $bg-darken;
+    }
+}

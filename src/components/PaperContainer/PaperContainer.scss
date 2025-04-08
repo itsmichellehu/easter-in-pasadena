@@ -1,0 +1,18 @@
+@use "@scss/abstracts/all-abstracts" as *;
+
+.bg-paper.container {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem rgba($color: $black, $alpha: 0.1);
+
+    .container-headline {
+        margin-bottom: 0.5rem;
+        color: #222222;
+    }
+
+    .chalk-divider,
+    .black-chalk-divider {
+        height: 0.3rem !important;
+    }
+
+}

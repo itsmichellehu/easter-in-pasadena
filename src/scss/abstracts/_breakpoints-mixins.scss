@@ -1,0 +1,29 @@
+@use "sass:map";
+
+$breakpoints: (
+	mobile-sm: 320px,
+	mobile-med: 375px,
+	mobile-lg: 425px,
+	sm: 576px,
+	med: 768px,
+	med-lg: 834px,
+	lg: 1024px,
+	xl: 1200px,
+	xxl: 1440px,
+	xxl-hero: 1480px,
+	xxxl: 1680px,
+	huge: 2000px,
+);
+
+@mixin breakpoint($name) {
+	@if map.has-key($breakpoints, $name) {  // ✅ Updated to map.has-key()
+		@media (min-width: map.get($breakpoints, $name)) {  // ✅ Updated to map.get()
+
+			@content;
+		}
+	}
+
+	@else {
+		@error "Unknown breakpoint: #{$name}. Please use one of: #{map.keys($breakpoints)}.";  // ✅ Updated to map.keys()
+	}
+}

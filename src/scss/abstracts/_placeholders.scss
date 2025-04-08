@@ -1,0 +1,546 @@
+@use 'variables' as *;
+@use 'breakpoints-mixins' as *;
+
+// Flex
+%flex-row {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+%flex-col {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+%flex-wrap {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+%flex-start {
+  display: flex !important;
+  flex-direction: flex-start !important;
+}
+
+%flex-nowrap {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+}
+
+%flex-row-reverse {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+}
+
+%flex-col-reverse {
+  display: flex !important;
+  flex-direction: column-reverse !important;
+}
+
+%flex-wrap-reverse {
+  display: flex !important;
+  flex-wrap: wrap-reverse !important;
+}
+
+@include breakpoint(sm) {
+  %flex {
+    &-row-sm {
+      display: flex;
+      flex-direction: row !important;
+    }
+
+    &-row-reverse-sm {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+
+    &-col-sm {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-col-reverse-sm {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    &-wrap-sm {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &-wrap-reverse-sm {
+      display: flex;
+      flex-wrap: wrap-reverse;
+    }
+
+    &-nowrap {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+@include breakpoint(med) {
+  %flex {
+    &-row-med {
+      display: flex;
+      flex-direction: row !important;
+    }
+
+    &-row-reverse-med {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    &-col-med {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-col-reverse-med {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    &-wrap-med {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &-wrap-reverse-med {
+      display: flex;
+      flex-wrap: wrap-reverse;
+    }
+
+    &-nowrap-med {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+// Margin bottom
+%mb {
+  &-0 {
+    margin-bottom: 0rem !important;
+  }
+
+  &-8 {
+    margin-bottom: 0.5rem !important;
+  }
+
+  &-16 {
+    margin-bottom: 1rem !important;
+  }
+
+  &-24 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  &-32 {
+    margin-bottom: 2rem !important;
+  }
+
+  &-40 {
+    margin-bottom: 2.5rem !important;
+  }
+
+  &-64 {
+    margin-bottom: 4rem !important;
+  }
+
+  &-80 {
+    margin-bottom: 5rem !important;
+  }
+}
+
+// Margin
+%mg {
+  &-0 {
+    margin: 0 !important;
+  }
+
+  &-auto {
+    margin: auto !important;
+  }
+}
+
+
+// Margin vertical
+%mv {
+  &-8 {
+    margin: 0.5rem 0 !important;
+  }
+
+  &-16 {
+    margin: 1rem 0 !important;
+  }
+
+  &-24 {
+    margin: 1.5rem 0 !important;
+  }
+
+  &-32 {
+    margin: 2rem 0 !important;
+  }
+
+  &-40 {
+    margin: 2.5rem 0 !important;
+  }
+
+  &-48 {
+    margin: 3rem 0 !important;
+  }
+
+  &-56 {
+    margin: 3.5rem 0 !important;
+  }
+
+  &-64 {
+    margin: 4rem 0 !important;
+  }
+}
+
+// Margin-top
+%mt {
+  &-0 {
+    margin-top: 0 !important;
+  }
+
+  &-8 {
+    margin-top: 0.5rem !important;
+  }
+
+  &-16 {
+    margin-top: 1rem !important;
+  }
+
+  &-24 {
+    margin-top: 1.5rem !important;
+  }
+
+  &-32 {
+    margin-top: 2rem !important;
+  }
+
+  &-40 {
+    margin-top: 2.5rem !important;
+  }
+}
+
+// Padding
+%pd {
+  &-40 {
+    padding: 2.5rem !important;
+  }
+}
+
+// Padding top
+%pt {
+  &-32 {
+    padding-top: 2rem !important;
+  }
+}
+
+// Padding bottom
+%pb {
+  &-0 {
+    padding-bottom: 0 !important;
+  }
+
+  &-16 {
+    padding-bottom: 1rem !important;
+  }
+
+  &-32 {
+    padding-bottom: 2rem !important;
+  }
+
+  &-48 {
+    padding-bottom: 3rem !important;
+  }
+}
+
+// Padding vertical
+%pv {
+  &-16 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  &-32 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+
+// Gap
+%gap {
+  &-8 {
+    gap: 0.5rem !important;
+  }
+
+  &-16 {
+    gap: 1rem !important;
+  }
+
+  &-24 {
+    gap: 1.5rem !important;
+  }
+
+  &-32 {
+    gap: 2rem !important;
+  }
+
+  &-40 {
+    gap: 2.5rem !important;
+  }
+
+  &-64 {
+    gap: 4rem !important;
+  }
+
+  &-80 {
+    gap: 5rem !important;
+  }
+}
+
+%quote-text {
+  font-family: "Noto Serif", sans-serif !important;
+  letter-spacing: 0.2px !important;
+  line-height: 170% !important;
+  margin-top: 0 !important;
+  color: $medium-grey !important;
+
+  @include breakpoint(lg) {
+    font-size: 1.3rem !important;
+  }
+}
+
+%subheading {
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 130%;
+  color: $black;
+  font-size: 1.3rem;
+  text-transform: none;
+  margin-bottom: 0.5rem;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+
+%subheader {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 125%;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  height: fit-content;
+}
+
+// Breakpoints placeholders
+
+// Define placeholders for mobile-only display settings
+%mobile-only-inherit {
+  display: inherit;
+}
+
+%mobile-only-flex {
+  display: flex;
+}
+
+%mobile-only-block {
+  display: block;
+}
+
+%mobile-only-inline {
+  display: inline;
+}
+
+%mobile-only-inline-block {
+  display: inline-block;
+}
+
+%mobile-only-grid {
+  display: grid;
+}
+
+// Placeholder for hiding elements globally
+%hide {
+  display: none !important;
+}
+
+// Define placeholders for hiding elements at specific breakpoints
+%hide-mobile-sm {
+  @include breakpoint(mobile-sm) {
+    display: none !important;
+  }
+}
+
+%hide-mobile-med {
+  @include breakpoint(mobile-med) {
+    display: none !important;
+  }
+}
+
+%hide-mobile-lg {
+  @include breakpoint(mobile-lg) {
+    display: none !important;
+  }
+}
+
+%hide-sm {
+  @include breakpoint(sm) {
+    display: none !important;
+  }
+}
+
+%hide-med {
+  @include breakpoint(med) {
+    display: none !important;
+  }
+}
+
+%hide-lg {
+  @include breakpoint(lg) {
+    display: none !important;
+  }
+}
+
+%hide-xl {
+  @include breakpoint(xl) {
+    display: none !important;
+  }
+}
+
+%hide-xxl {
+  @include breakpoint(xxl) {
+    display: none !important;
+  }
+}
+
+// Define placeholders for showing content at different breakpoints
+%show-mobile-sm {
+  @include breakpoint(mobile-sm) {
+    display: inherit;
+  }
+}
+
+%show-mobile-med {
+  @include breakpoint(mobile-med) {
+    display: inherit;
+  }
+}
+
+%show-mobile-lg {
+  @include breakpoint(mobile-lg) {
+    display: inherit;
+  }
+}
+
+%show-mobile-lg-flex {
+  @include breakpoint(mobile-lg) {
+    display: flex !important;
+  }
+}
+
+%show-mobile-lg-block {
+  @include breakpoint(mobile-lg) {
+    display: block !important;
+  }
+}
+
+%show-sm {
+  @include breakpoint(sm) {
+    display: inherit;
+  }
+}
+
+%show-sm-block {
+  @include breakpoint(sm) {
+    display: block !important;
+  }
+}
+
+%show-sm-flex {
+  @include breakpoint(sm) {
+    display: flex !important;
+  }
+}
+
+%show-med {
+  @include breakpoint(med) {
+    display: inherit;
+  }
+}
+
+%show-med-flex {
+  @include breakpoint(med) {
+    display: flex !important;
+  }
+}
+
+%show-med-block {
+  @include breakpoint(med) {
+    display: block !important;
+  }
+}
+
+%show-med-list-item {
+  @include breakpoint(med) {
+    display: list-item !important;
+  }
+}
+
+%show-lg {
+  @include breakpoint(lg) {
+    display: inherit;
+  }
+}
+
+%show-lg-flex {
+  @include breakpoint(lg) {
+    display: flex !important;
+  }
+}
+
+%show-lg-block {
+  @include breakpoint(lg) {
+    display: block !important;
+  }
+}
+
+%show-xl {
+  @include breakpoint(xl) {
+    display: inherit;
+  }
+}
+
+%show-xxl {
+  @include breakpoint(xxl) {
+    display: inherit;
+  }
+}
+
+%buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  @include breakpoint(med) {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+%section-content-width {
+  width: $content-max-width !important;
+  max-width: $max-content-width !important;
+}

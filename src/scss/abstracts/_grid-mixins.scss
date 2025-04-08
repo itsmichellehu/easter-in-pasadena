@@ -1,0 +1,45 @@
+// Mixin for creating a dynamic grid layout with flexible fr distribution
+// Mixin for grid container with customizable columns, rows, and gap
+@mixin grid-container($columns, $rows: auto, $column-gap: 1rem, $row-gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-template-rows: $rows;
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+}
+
+// Mixin for grid item with span and optional row span
+@mixin grid-item($column-span, $row-span: auto) {
+  grid-column: span $column-span;
+  @if $row-span != auto {
+    grid-row: span $row-span;
+  }
+}
+
+
+// Using the grid-container mixin for the container
+// .container {
+//   @include grid-container(3, auto, 20px, 20px); // 3 columns, auto rows, 20px gaps
+// }
+
+// // Using the grid-item mixin for the items
+// .item-1 {
+//   @include grid-item(2, 1); // Spans 2 columns, 1 row
+// }
+
+// .item-2 {
+//   @include grid-item(1, 2); // Spans 1 column, 2 rows
+// }
+
+// .item-3 {
+//   @include grid-item(1, 1); // Spans 1 column, 1 row
+// }
+
+// .item-4 {
+//   @include grid-item(2, 1); // Spans 2 columns, 1 row
+// }
+
+// .item-5 {
+//   @include grid-item(1, 1); // Spans 1 column, 1 row
+// }
+

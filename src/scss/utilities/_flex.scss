@@ -1,0 +1,137 @@
+@use "@scss/abstracts/all-abstracts" as *;
+
+.flex {
+	&-row {
+		display: flex;
+		flex-direction: row;
+	}
+
+	&-row-reverse {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	&-col {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&-col-reverse {
+		display: flex;
+		flex-direction: column-reverse !important;
+	}
+
+	&-wrap {
+		display: flex;
+		flex-wrap: wrap !important;
+	}
+
+	&-wrap-reverse {
+		display: flex;
+		flex-wrap: wrap-reverse !important;
+	}
+
+	&-nowrap {
+		display: flex;
+		flex-wrap: nowrap !important;
+	}
+}
+
+.flex-row,
+.flex-row-reverse,
+.flex-col,
+.flex-col-reverse,
+.flex-wrap,
+.flex-wrap-reverse {
+	&-8 {
+		gap: 0.5rem;
+	}
+
+	&-16 {
+		gap: 1rem;
+	}
+
+	&-24 {
+		gap: 1.5rem;
+	}
+
+	&-32 {
+		gap: 2rem;
+	}
+
+	&-40 {
+		gap: 2.5rem;
+	}
+
+	&-48 {
+		gap: 3rem;
+	}
+
+	&-56 {
+		gap: 3.5rem;
+	}
+
+	&-64 {
+		gap: 4rem;
+	}
+
+	&-72 {
+		gap: 4.5rem;
+	}
+
+	&-80 {
+		gap: 5rem;
+	}
+}
+
+.flex-col {
+	@extend %flex-col;
+
+	&.flex-row-sm {
+		@extend %flex-row-sm;
+	}
+
+	&.flex-row-med {
+		@extend %flex-row-med;
+	}
+}
+
+.flex-row {
+	@extend %flex-row;
+
+	&.flex-col-med {
+		@extend %flex-col-med;
+	}
+
+	&.flex-col-sm {
+		@extend %flex-col-sm;
+	}
+}
+
+.row-evenly {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.gap {
+	&-8 {
+		gap: 0.5rem;
+	}
+
+	&-16 {
+		gap: 1rem;
+	}
+
+	&-24 {
+		gap: 1.5rem;
+	}
+
+	&-32 {
+		gap: 2rem;
+	}
+
+	&-40 {
+		gap: 2.5rem;
+	}
+}

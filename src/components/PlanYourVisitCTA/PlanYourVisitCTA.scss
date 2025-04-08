@@ -1,0 +1,116 @@
+@use "@scss/abstracts/variables" as *;
+
+#pyv-section {
+    .church-members-cutout {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    #_builder-form,
+    .fields-container {
+        padding: 0 !important;
+    }
+
+    .pyv-form-embed {
+        width: 100%;
+        border: none;
+    }
+
+    .button-wrapper {
+        display: flex;
+        flex-direction: row;
+        padding: 0.25rem;
+        gap: 12px;
+        align-items: center;
+        align-self: stretch;
+        border: 1.5px solid white;
+        border-radius: 5rem;
+        margin-bottom: 2rem;
+
+        a {
+            display: flex !important;
+            flex: 1 0 0 !important;
+        }
+    }
+
+    .text-pyv-form-link {
+        margin: auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    .button-wrapper {
+        display: none;
+        flex-direction: column;
+        padding: 0.25rem;
+        gap: 0.5rem;
+        align-items: center;
+        align-self: stretch;
+        margin-bottom: 1rem;
+
+        a {
+            display: flex !important;
+            flex: 1 0 0 !important;
+        }
+    }
+
+    .pyv-container {
+        padding: 0 1.5rem 1.5rem;
+        align-self: stretch;
+        border-radius: 0.5rem;
+        margin-top: 2rem;
+
+        p {
+            color: $paper-bg-text-color;
+        }
+
+        .intro {
+            p:first-child {
+                // font-weight: 500;
+                margin-bottom: 0.25rem !important;
+            }
+        }
+    }
+
+    .chalk-divider {
+        height: 0.5rem !important;
+    }
+
+    .info-wrapper,
+    .pyv-incentives-wrapper {
+        display: flex;
+        // align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        p {
+            margin: 0;
+        }
+
+        .headline {
+            font-size: 1.125rem;
+            letter-spacing: -0.01125rem;
+        }
+    }
+
+    .pyv-incentives-wrapper {
+        >.icon {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    .pyv-incentives-headline {
+        color: $paper-bg-text-color;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .hl-app .row {
+        padding: 0 !important;
+    }
+
+    .not-ready-yet-wrapper {
+        margin-top: 2rem;
+    }
+}

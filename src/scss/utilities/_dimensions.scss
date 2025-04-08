@@ -1,0 +1,45 @@
+// utilities/_dimensions.scss
+
+.container-max-width,
+.content-max-width {
+	width: 90% !important;
+	max-width: 100rem !important;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.width-100 {
+	width: 100% !important;
+	height: auto;
+	object-fit: cover;
+}
+
+.height-auto {
+	height: auto;
+}
+
+.width-auto {
+	width: auto;
+}
+
+.img-100 {
+	width: 100%;
+}
+
+.mw-1024 {
+	max-width: 64rem !important;
+	margin: auto;
+}
+
+.mw-1088 {
+	max-width: 68rem !important;
+	margin: auto;
+}
+
+.width-fit-content {
+	width: fit-content;
+}
+
+.width-min-content {
+	width: min-content;
+}

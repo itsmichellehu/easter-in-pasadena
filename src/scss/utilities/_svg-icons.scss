@@ -1,0 +1,82 @@
+@use "@scss/abstracts/all-abstracts" as *;
+
+.svg-icon {
+	color: $black;
+	text-align: left;
+	object-fit: fill;
+	width: 1rem;
+	height: 1rem;
+	margin-top: 0;
+	line-height: 175%;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&.sparkle {
+		min-width: 24px;
+		max-width: 24px;
+		min-height: 24px;
+		max-height: 24px;
+	}
+
+	&.friends,
+	&.search {
+		width: 22px;
+		height: 22px;
+	}
+
+	&.user {
+		height: 26px;
+	}
+
+	&.medium {
+		width: 24px;
+		height: 24px;
+	}
+
+	&.blue {
+		color: $emphasis-blue;
+	}
+
+	&._40px {
+		width: 40px;
+		height: 40px;
+		transform: none;
+
+		&:hover {
+			color: $light-grey;
+		}
+
+		&.rotate--90 {
+			align-self: auto;
+			margin-top: 0;
+			transform: rotate(-90deg);
+		}
+	}
+
+	&.arrow {
+		color: var(--off-black);
+		width: 20px;
+		height: 20px;
+		margin-top: 4px;
+		transform: rotate(90deg);
+	}
+}
+
+.ic-arrow_jump-to-section {
+	vertical-align: baseline;
+	transform: rotate(-45deg) translateX(-0.6rem);
+	margin-left: 0.25rem;
+	margin-top: 4px;
+	margin-left: 2px;
+}
+
+.material-symbols-outlined {
+	font-size: 32px;
+	margin-bottom: 0;
+}
+
+.ic-material-symbol-check {
+	transform: translateY(6px);
+}

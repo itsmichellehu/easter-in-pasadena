@@ -1,0 +1,150 @@
+@use "@scss/abstracts/all-abstracts" as *;
+
+.h2-text-wrapper {
+	display: inline-flex;
+	flex-direction: column;
+	align-self: center;
+	text-align: center;
+	width: min-content;
+}
+
+/* Heading and paragraph base styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+
+	&::first-letter {
+		text-transform: capitalize;
+	}
+}
+
+h1,
+h2 {
+	position: relative;
+	display: inline-block;
+	color: $beige;
+	text-transform: uppercase;
+
+	.outlined {
+		font-weight: 800;
+		text-align: center;
+		-webkit-text-stroke-width: 1.25px;
+		-webkit-text-stroke-color: $beige;
+		color: transparent;
+		letter-spacing: 0.08rem;
+	}
+}
+
+
+p {
+	color: white;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 155%;
+	margin: 0;
+	margin-bottom: 1.25rem;
+
+	@include breakpoint(med) {
+		font-size: 1.125rem;
+	}
+}
+
+// Major Third typescale 1.250
+h1 {
+	font-size: 1.875rem;
+	font-size: 2.375rem;
+	font-weight: 500;
+	line-height: 120%;
+	letter-spacing: 0;
+
+	@include breakpoint(med) {
+		font-size: 2.375rem;
+		font-weight: 600;
+		line-height: 110%;
+		letter-spacing: -0.07125rem;
+		font-size: 3.375rem;
+	}
+}
+
+$h2-font-size-base: 2.375;
+$h2-font-size-med: 3;
+$h2-font-size-lg: 4;
+$h2-outlined-font-size-calc: 1.015;
+$h2-font-size-scale-calc: calc($h2-font-size-base / $heading-text-gap-base);
+
+h2 {
+	// Ensures the h2's width matches the text content
+	font-size: $h2-font-size-base * 1rem;
+	font-weight: 600;
+	line-height: 100%;
+	letter-spacing: 0.005rem;
+	margin: 0 auto 2rem auto;
+	color: #FFF7E9;
+	text-align: center;
+	width: 100%;
+
+	.outlined {
+		font-size: calc($h2-font-size-base * $h2-outlined-font-size-calc);
+	}
+
+	@include breakpoint(med) {
+		font-size: $h2-font-size-med * 1rem;
+		margin-bottom: 3rem;
+
+		.outlined {
+			font-size: calc($h2-font-size-med * $h2-outlined-font-size-calc);
+			letter-spacing: 0.1rem;
+			-webkit-text-stroke-width: 1.5px;
+		}
+	}
+
+	@include breakpoint(lg) {
+		font-size: $h2-font-size-lg * 1rem;
+		margin-bottom: 4rem;
+
+		.outlined {
+			font-size: calc($h2-font-size-lg * $h2-outlined-font-size-calc);
+		}
+	}
+}
+
+h3 {
+	color: #FFFCF6;
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 135%;
+	letter-spacing: -0.01rem;
+	margin-bottom: 0.5rem;
+
+	&.large {
+		color: white;
+		font-size: 2.5rem;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 110%;
+		letter-spacing: -0.02875rem;
+		text-align: left;
+		text-transform: none;
+	}
+
+	@include breakpoint(med) {
+		font-size: 2.0625rem;
+		line-height: 125%;
+		letter-spacing: -0.03094rem;
+	}
+}
+
+h4 {
+	font-size: 1.35rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 135%;
+	/* 2.10938rem */
+	letter-spacing: -0.03125rem;
+}

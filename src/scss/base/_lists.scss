@@ -1,0 +1,155 @@
+@use "@scss/abstracts/all-abstracts" as *;
+$list-bullet-text-spacing: 0.25rem;
+
+ul,
+ol {
+	align-self: center;
+	margin-bottom: 0;
+	gap: 0.5rem;
+	text-align: left;
+	list-style-position: outside;
+	margin-left: - calc($list-bullet-text-spacing);
+	padding: 0;
+
+	li {
+		line-height: 150%;
+		margin-bottom: 0.5rem;
+		text-align: left;
+		font-weight: normal;
+		padding-left: $list-bullet-text-spacing;
+
+		span {
+			font-weight: 500;
+		}
+
+		@include breakpoint(med) {
+			font-size: 1.125rem;
+		}
+
+		@include breakpoint(lg) {
+			font-size: 1.25rem;
+		}
+	}
+
+	li:last-child {
+		margin-bottom: 0;
+	}
+
+	&.gap--medium {
+		gap: 1rem;
+	}
+
+	&.list-style-inside {
+		list-style-position: inside;
+	}
+
+	&.list-transform-none {
+		margin-left: 0;
+
+		li {
+			padding-left: 0;
+		}
+	}
+}
+
+.list-transform-none {
+
+	&.gap-8 {
+		li {
+			margin-bottom: 0.5rem;
+		}
+	}
+}
+
+ul.list-style-type,
+ol.list-style-type {
+	li {
+		list-style-type: none;
+	}
+}
+
+.list-none {
+	list-style-type: none;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+ul.list-none {
+	list-style-type: none;
+
+	&.gap-8 {
+		li {
+			margin-bottom: 0.5rem;
+		}
+	}
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	line-height: 150%;
+	list-style-type: decimal;
+	margin: 0;
+	grid-column-gap: 16px;
+	grid-row-gap: 16px;
+
+	&.margin-bottom {
+		grid-column-gap: 1px;
+		grid-row-gap: 1px;
+	}
+
+	&.margin-bottom._0 {
+		align-items: flex-start;
+		align-self: auto;
+		flex: 0 auto;
+		grid-column-gap: 16px;
+		grid-row-gap: 16px;
+	}
+
+	&.numerical {
+		padding-bottom: 0;
+	}
+
+	&.gap-8 {
+		align-items: flex-start;
+		align-self: flex-start;
+		grid-column-gap: 8px;
+		grid-row-gap: 8px;
+		list-style-type: disc;
+		text-align: left;
+
+		&.numbered {
+			list-style-type: decimal;
+		}
+	}
+
+	&._24px {
+		grid-column-gap: 24px;
+		grid-row-gap: 24px;
+	}
+
+	&--dark {
+		li {
+			color: #cccccc;
+		}
+	}
+}
+
+ul.list-item-black {
+
+	li {
+		color: $black;
+	}
+}
+
+ul.li-pl-0 {
+	li {
+		padding-left: 0;
+	}
+}

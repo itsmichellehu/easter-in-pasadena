@@ -1,0 +1,230 @@
+@use "@scss/abstracts/breakpoints-mixins" as *;
+@use "@scss/abstracts/variables" as *;
+@use "sass:map";
+
+$wp-content-uploads-url: 'https://vrwpaviv.elementor.cloud/wp-content/uploads/';
+
+$scribble-01-height: 1.25rem;
+$scribble-02-height: 1.5rem;
+
+$line-single-01-height: 0.75rem;
+$line-single-02-height: 1rem;
+
+$line-height-increment-med: 0.25rem;
+$line-height-increment-xl: 0.5rem;
+
+$scribble-height-increment-med: 0.5rem;
+$scribble-height-increment-xl: 0.75rem;
+
+// === Headline Decorations ===
+// Base decoration styles
+.headline-decoration {
+    display: flex;
+    width: 100%; // Matches the width of its container
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    margin-top: 0.15rem;
+
+    align-self: stretch;
+
+    // === Variations ===
+    &.scribble-01 {
+        height: $scribble-01-height; // Default height for scribble-01
+        background-image: url('#{$wp-content-uploads-url}2025/01/chalk-underline_scribble-01_teal.webp');
+    }
+
+    &.scribble-02 {
+        height: $scribble-02-height;
+        background-image: url('#{$wp-content-uploads-url}2025/01/chalk-underline_scribble-02_teal.webp');
+
+        &.white {
+            background-image: url('#{$wp-content-uploads-url}2025/01/chalk-underline_scribble-02_white.webp');
+        }
+
+        &.beige {
+            background-image: url('#{$wp-content-uploads-url}2025/01/chalk-underline_scribble-02_beige.webp');
+        }
+    }
+
+    &.line-single-01 {
+        height: $line-single-01-height;
+        background-image: url('#{$wp-content-uploads-url}2025/01/chalk-underline_single-01_teal.webp');
+    }
+
+    &.line-single-02 {
+        height: $line-single-02-height;
+        background-image: url('#{$wp-content-uploads-url}2025/01/chalk-underline_single-02_teal.webp');
+    }
+
+    // === Height Modifiers ===
+    &.height-med {
+        height: calc($scribble-01-height + 0.25rem); // Default increase
+    }
+
+    &.height-lg {
+        height: calc($scribble-01-height + 0.5rem); // Larger increase
+    }
+
+    // === Responsive Breakpoints ===
+    @include breakpoint(med) {
+        &.scribble-01 {
+            height: calc($scribble-01-height + $scribble-height-increment-med);
+        }
+
+        &.scribble-02 {
+            height: calc($scribble-02-height + $scribble-height-increment-med);
+        }
+
+        &.line-single-01 {
+            height: calc($line-single-01-height + $line-height-increment-med);
+        }
+
+        &.line-single-02 {
+            height: calc($line-single-02-height + $line-height-increment-med);
+        }
+    }
+
+    @include breakpoint(lg) {
+        &.scribble-01 {
+            height: calc($scribble-01-height + $scribble-height-increment-xl);
+        }
+
+        &.scribble-02 {
+            height: calc($scribble-02-height + $scribble-height-increment-xl);
+        }
+
+        &.line-single-01 {
+            height: calc($line-single-01-height + $line-height-increment-xl);
+        }
+
+        &.line-single-02 {
+            height: calc($line-single-02-height + $line-height-increment-xl);
+        }
+    }
+}
+
+// === Headline Container Styles ===
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto 3rem auto;
+    width: min-content;
+    max-width: 100%;
+
+    h2 {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: $heading-text-gap-base;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            display: flex;
+            position: relative;
+            text-align: center;
+            gap: $heading-text-gap-base;
+        }
+    }
+
+    h2,
+    span.text-wrapper {
+        @include breakpoint(med) {
+            gap: $heading-text-gap-med;
+        }
+
+        @include breakpoint(lg) {
+            gap: $heading-text-gap-lg;
+        }
+    }
+}
+
+$heading-decorations: (
+    scribble-01: (base: 1rem,
+        med: 1.25rem,
+        xl: 1.5rem,
+        url: 'https://example.com/scribble-01.webp'
+    ),
+    scribble-02: (base: 1.5rem,
+        med: 1.75rem,
+        xl: 2rem,
+        url: 'https://example.com/scribble-02.webp'
+    ),
+    single-line: (base: 0.1rem,
+        med: 0.15rem,
+        xl: 0.2rem,
+        url: 'https://example.com/single-line.webp'
+    ),
+    double-line: (base: 0.2rem,
+        med: 0.3rem,
+        xl: 0.4rem,
+        url: 'https://example.com/double-line.webp'
+    )
+);
+
+.decoration {
+    @each $name, $properties in $heading-decorations {
+        &.#{$name} {
+            background-image: url(map.get($properties, url));
+            background-repeat: no-repeat;
+            background-position: center;
+            height: map.get($properties, base);
+
+            @include breakpoint(med) {
+                height: map.get($properties, med);
+            }
+
+            @include breakpoint(xl) {
+                height: map.get($properties, xl);
+            }
+        }
+    }
+}
+
+.img-chalk-heading-underline {
+    width: 100%;
+    align-self: stretch;
+    height: 0.75rem;
+    position: relative;
+
+    &.scribble {
+        &-01 {
+            height: 1.25rem;
+        }
+
+        &-02 {
+            height: 1.5rem;
+        }
+    }
+
+    @include breakpoint(med) {
+        height: 1.25rem;
+
+        &.scribble {
+            &-01 {
+                height: 1.5rem;
+            }
+
+            &-02 {
+                height: 1.75rem;
+            }
+        }
+    }
+
+    @include breakpoint(xl) {
+        height: 1.75rem;
+
+        &.scribble {
+            &-01 {
+                height: 2rem;
+            }
+
+            &-02 {
+                height: 2.25rem;
+            }
+        }
+    }
+}

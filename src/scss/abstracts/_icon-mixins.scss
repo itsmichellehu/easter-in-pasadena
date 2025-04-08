@@ -1,0 +1,59 @@
+@mixin iconSize($size) {
+	@if $size =="xs" {
+		width: 24px;
+		height: 24px;
+	}
+
+	@else if $size =="sm" {
+		width: 32px;
+		height: 32px;
+	}
+
+	@else if $size =="med" {
+		width: 40px;
+		height: 40px;
+	}
+
+	@else if $size =="lg" {
+		width: 56px;
+		height: 56px;
+	}
+
+	@else if $size =="xl" {
+		width: 64px;
+		height: 64px;
+	}
+}
+
+
+.iconSize {
+	&-xxs {
+		width: 20px;
+		height: 20px;
+	}
+
+	&-xs {
+		width: 24px;
+		height: 24px;
+	}
+
+	&-sm {
+		width: 32px;
+		height: 32px;
+	}
+
+	&-med {
+		width: 40px;
+		height: 40px;
+	}
+
+	&-lg {
+		width: 64px;
+		height: 64px;
+	}
+
+	&-xl {
+		width: 80px;
+		height: 80px;
+	}
+}

@@ -1,0 +1,59 @@
+@use "@scss/abstracts/variables" as *;
+@use "@scss/abstracts/breakpoints-mixins" as *;
+
+hr {
+  box-sizing: content-box;
+  height: 0.5px;
+  background-color: $medium-light-grey;
+  border: none;
+
+  &.dashed-blue {
+    border-style: dashed;
+    background-color: $light-blue;
+  }
+
+  &.solid-black {
+    background-color: $black;
+  }
+
+  &.solid-grey {
+    background-color: $light-grey;
+  }
+}
+
+// To apply a white chalk divider to sections or containers to separate sections
+
+.chalk-divider {
+  height: 0.5rem;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  width: 100%;
+
+  .section-divider {
+    width: min($max-content-width, $content-max-width);
+  }
+
+  @include breakpoint(med) {
+    height: 0.75rem;
+  }
+
+  @include breakpoint(lg) {
+    height: 1rem;
+  }
+}
+
+
+.black-chalk-divider {
+  background-image: url('https://vrwpaviv.elementor.cloud/wp-content/uploads/2025/02/black-chalk-line-divider.webp');
+}
+
+.white-chalk-divider {
+  background: url(https://vrwpaviv.elementor.cloud/wp-content/uploads/2025/01/chalk-underline_single-02_white.webp);
+  background-size: 103.5% 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+}
