@@ -1,14 +1,14 @@
 {
 	"name": "easter-in-pasadena",
 	"version": "1.0.0",
-	"main": "src/main.js",
+	"main": "src/index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "webpack serve --config webpack.config.js",
-		"build": "webpack --config webpack.config.js",
-		"watch:sass": "npx sass --watch src/scss:public/css --load-path=src/scss",
+		"dev": "webpack serve --config webpack/webpack.dev.js",
+		"build": "webpack --config webpack/webpack.prod.js",
+		"watch:sass": "npx sass --watch src/scss:dist/css --load-path=src/scss",
 		"watch": "npm-run-all --parallel watch:sass dev",
-		"clean": "rm -rf public && npm run build",
+		"clean": "rm -rf dist && npm run build",
 		"wipe": "rm -rf node_modules && rm -rf package-lock.json",
 		"update": "npx npm-check-updates -u && npm install",
 		"clean:cache": "npm cache clean --force && rm -rf node_modules package-lock.json && npm install"
