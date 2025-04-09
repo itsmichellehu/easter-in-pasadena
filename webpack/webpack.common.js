@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-	entry: "./src/index.js",
+	entry: path.resolve(__dirname, "../src/index.js"),
 	output: {
 		path: path.resolve(__dirname, "../dist"),
 		filename: "index.js",
@@ -30,6 +30,10 @@ module.exports = {
 				}
 			},
 			{
+				test: /\.html$/,
+				use: "html-loader"
+			},
+			{
 				test: /\.(woff2?|ttf|otf|eot)$/,
 				type: "asset/resource",
 				generator: {
@@ -47,14 +51,14 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: "./src/index.html",
+			template: path.resolve(__dirname, "../src/index.html"),
 			filename: "index.html"
 		}),
 		new CopyWebpackPlugin({
 			patterns: [
-				{ from: "src/assets/images", to: "assets/images", noErrorOnMissing: true },
-				{ from: "src/assets/svg", to: "assets/svg", noErrorOnMissing: true },
-				{ from: "src/assets/fonts", to: "assets/fonts", noErrorOnMissing: true }
+				{ from: path.resolve(__dirname, "../src/assets/images"), to: "assets/images", noErrorOnMissing: true },
+				{ from: path.resolve(__dirname, "../src/assets/svg"), to: "assets/svg", noErrorOnMissing: true },
+				{ from: path.resolve(__dirname, "../src/assets/fonts"), to: "assets/fonts", noErrorOnMissing: true }
 			]
 		})
 	]

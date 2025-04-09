@@ -2,7 +2,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const { merge } = require("webpack-merge");
-const common = require("./webpack.common");
+const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
 	mode: "development",
@@ -28,12 +28,12 @@ module.exports = merge(common, {
 		]
 	},
 	devServer: {
-		static: path.resolve(__dirname, "../dist"),
-		compress: true,
-		port: 5888,
+		static: "../dist",
 		hot: true,
-		open: true,
-		historyApiFallback: true
+		port: 5888,
+		historyApiFallback: true,
+		watchFiles: ["../src/**/*", "../dist/**/*"],
+		liveReload: true
 	},
 	plugins: [
 		new webpack.DefinePlugin({
