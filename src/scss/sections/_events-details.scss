@@ -1,0 +1,201 @@
+@use "@scss/abstracts/all-abstracts" as *;
+
+.easter-pre-events {
+	width: 100%;
+
+	&__wrapper {
+		text-align: center;
+		padding: 3rem 1.5rem;
+		background-image: url("assets/images/bg-paper.webp");
+		color: $off-black;
+		width: 90%;
+		margin: auto;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+		max-width: 1200px;
+		margin: 0 auto;
+
+		@media (min-width: 1024px) {
+			flex-direction: row;
+			align-items: flex-start;
+			gap: 4rem;
+		}
+	}
+
+	&__image {
+		flex: 1;
+
+		img {
+			width: 100%;
+			border-radius: 0.25rem;
+			box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+		}
+	}
+
+	&__details {
+		flex: 1;
+	}
+
+	&__heading {
+		font-size: 2.75rem;
+		font-weight: 800;
+		color: #6b46c1;
+		line-height: 1.2;
+		margin-bottom: 1rem;
+		display: none;
+
+		span {
+			display: block;
+		}
+
+		@include breakpoint(med) {
+			display: block;
+		}
+	}
+
+	&__intro {
+		font-size: 1.125rem;
+		margin-bottom: 1.5rem;
+		color: #333;
+
+		strong {
+			font-weight: 600;
+		}
+	}
+
+	&__info {
+		list-style: none;
+		padding: 0;
+		margin: 2rem 0;
+		font-size: 1rem;
+
+		li {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			margin-bottom: 1rem;
+
+			.icon {
+				font-size: 1.25rem;
+				color: #6b46c1;
+				flex-shrink: 0;
+			}
+
+			p {
+				color: $off-black;
+				font-weight: 500;
+				margin-bottom: 0;
+			}
+
+			small {
+				display: block;
+				font-size: 0.875rem;
+				color: #555;
+			}
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		@media (min-width: 600px) {
+			flex-direction: row;
+		}
+
+		a {
+			text-align: center;
+		}
+	}
+}
+
+// ===== Buttons =====
+
+.btn {
+	display: inline-block;
+	padding: 0.75rem 1.5rem;
+	font-weight: 600;
+	border-radius: 9999px;
+	text-decoration: none;
+	transition: background 0.2s ease;
+
+	&--primary {
+		background: #06b6d4;
+		color: #fff;
+
+		&:hover {
+			background: #0891b2;
+		}
+	}
+
+	&--secondary {
+		background: #111;
+		color: #fff;
+
+		&:hover {
+			background: #333;
+		}
+	}
+}
+
+// ===== Pre-Easter Event Cards =====
+
+.pre-events {
+	margin-top: 3rem;
+
+	&__heading {
+		font-size: 1.75rem;
+		font-weight: 700;
+		color: #6b46c1;
+		margin-bottom: 0.5rem;
+	}
+
+	&__desc {
+		font-size: 0.95rem;
+		color: #444;
+		margin-bottom: 1.5rem;
+	}
+
+	&__card {
+		background: linear-gradient(to right, #6366f1, #a855f7);
+		color: white;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem;
+		border-radius: 0.75rem;
+		margin-bottom: 1rem;
+
+		.date {
+			text-align: left;
+
+			p:first-child {
+				font-size: 0.75rem;
+				text-transform: uppercase;
+			}
+
+			.day {
+				font-size: 2rem;
+				font-weight: bold;
+			}
+		}
+
+		.info {
+			text-align: right;
+
+			.name {
+				font-weight: 600;
+				margin-bottom: 0.25rem;
+			}
+
+			.time {
+				font-size: 0.875rem;
+			}
+		}
+	}
+}
