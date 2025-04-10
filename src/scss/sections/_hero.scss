@@ -134,6 +134,10 @@ $hero-spacing: 2rem;
 		}
 	}
 
+	&__intro {
+		max-width: 50rem;
+	}
+
 	&__tagline {
 		color: #fff;
 		text-align: center;
@@ -153,7 +157,7 @@ $hero-spacing: 2rem;
 			font-weight: 500;
 			line-height: 115%; /* 3.1625rem */
 			letter-spacing: -0.0275rem;
-			margin: 3rem 0;
+			margin: 1rem 0 0;
 		}
 	}
 

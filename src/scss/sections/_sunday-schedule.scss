@@ -1,12 +1,12 @@
 @use "@scss/abstracts/all-abstracts" as *;
-
-p {
-	text-align: center !important;
-
-	@include breakpoint(med) {
-		text-align: left !important;
-	}
-}
+// 
+// p {
+// 	text-align: center !important;
+//
+// 	@include breakpoint(med) {
+// 		text-align: left !important;
+// 	}
+// }
 strong {
 	font-weight: 600;
 }

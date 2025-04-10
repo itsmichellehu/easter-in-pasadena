@@ -7,6 +7,10 @@
 		text-align: center;
 		width: 90%;
 		margin: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
 	}
 	//
 	// 	&__event-container {
@@ -19,8 +23,9 @@
 		display: flex;
 		flex-direction: column;
 		margin: 0 auto;
+		gap: 1rem;
 
-		@media (min-width: 1024px) {
+		@media (min-width: 768px) {
 			flex-direction: row;
 			align-items: flex-start;
 			gap: 2rem;
@@ -29,8 +34,8 @@
 
 	&__image {
 		flex: 1;
-
 		img {
+			margin-bottom: 1rem;
 			width: 100%;
 			border-radius: 0.25rem;
 			box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
@@ -40,6 +45,8 @@
 	&__details {
 		flex: 1;
 		padding: 1.5rem;
+
+		text-align: left;
 	}
 
 	&__heading {
@@ -48,7 +55,6 @@
 		// color: #6b46c1;
 		line-height: 1.2;
 		margin-bottom: 1rem;
-		display: none;
 
 		@include breakpoint(med) {
 			display: block;
@@ -112,18 +118,18 @@
 		}
 	}
 
-	@include breakpoint(xl) {
+	@include breakpoint(lg) {
 		p,
 		h2 {
 			text-align: left;
 		}
 
-		&__wrapper {
-			display: grid;
-			gap: 4rem;
-			grid-template-columns: 2fr 1fr;
-			align-items: start;
-		}
+		// &__wrapper {
+		// 	display: grid;
+		// 	gap: 4rem;
+		// 	grid-template-columns: 2fr 1fr;
+		// 	align-items: start;
+		// }
 		//
 		// 		&__event-container {
 		// 			padding: 3rem;
@@ -209,6 +215,14 @@
 		margin-bottom: 1.5rem;
 	}
 
+	.easter-events__content-wrapper {
+		@include breakpoint(lg) {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			gap: 2rem;
+		}
+	}
+
 	&__card {
 		background: url("@assets/images/bg-pre-events.png");
 		color: white;
@@ -217,7 +231,13 @@
 		align-items: center;
 		padding: 1rem 1.5rem;
 		border-radius: 0.5rem;
+		margin: auto;
 		margin-bottom: 1rem;
+		max-width: 30rem;
+
+		p {
+			margin-bottom: 0;
+		}
 
 		.date {
 			text-align: center;
@@ -237,6 +257,7 @@
 
 		.info {
 			text-align: left;
+			
 
 			.name {
 				font-weight: 600;
