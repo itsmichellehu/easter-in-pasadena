@@ -19,12 +19,12 @@
 	"description": "",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/michellehu0414/easter-in-pasadena.git"
+		"url": "https://github.com/itsmichellehu/easter-in-pasadena.git"
 	},
 	"bugs": {
-		"url": "https://github.com/michellehu0414/easter-in-pasadena/issues"
+		"url": "https://github.com/itsmichellehu/easter-in-pasadena/issues"
 	},
-	"homepage": "https://github.com/michellehu0414/easter-in-pasadena#readme",
+	"homepage": "https://github.com/itsmichellehu/easter-in-pasadena#readme",
 	"dependencies": {
 		"add-to-calendar-button-react": "^2.8.5",
 		"axios": "^1.8.4",
