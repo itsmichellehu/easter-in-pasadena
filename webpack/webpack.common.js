@@ -53,7 +53,7 @@ module.exports = {
 						options: {
 							implementation: require("sass"),
 							sassOptions: {
-								includePaths: [path.resolve(__dirname, "src/scss")],
+								includePaths: [path.resolve(__dirname, "../src/scss")],
 								outputStyle: "expanded"
 							}
 						}
@@ -89,7 +89,7 @@ module.exports = {
 			]
 		}),
 		new MiniCssExtractPlugin({
-			filename: "css/[name].css"
+			filename: "index.css"
 		})
 	]
 };

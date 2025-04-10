@@ -8,7 +8,7 @@ const glob = require("glob");
 const common = require("./webpack.common.js");
 
 const PATHS = {
-	src: path.join(__dirname, "src")
+	src: path.join(__dirname, "../src") // ✅ FIX THIS
 };
 
 module.exports = merge(common, {
