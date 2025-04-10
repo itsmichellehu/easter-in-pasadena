@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write  # Needed to push `dist/`
+  contents: write  # Needed to push `public/`
   pages: write
   id-token: write
 
@@ -36,14 +36,14 @@ jobs:
       - name: Build Project with Webpack
         run: npm run build
 
-      - name: Commit and Push Updated `dist/`
+      - name: Commit and Push Updated `public/`
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add dist
-          git commit -m "Auto-update dist/ folder" || echo "No changes to commit"
+          git add public
+          git commit -m "Auto-update public/ folder" || echo "No changes to commit"
           git pull --rebase origin main  # Prevent conflicts
           git push origin main
 
@@ -53,7 +53,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./dist"
+          path: "./public"
 
       - name: Deploy to GitHub Pages
         id: deployment
