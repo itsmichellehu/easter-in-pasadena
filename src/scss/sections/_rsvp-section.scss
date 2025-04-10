@@ -1,6 +1,6 @@
 @use "@scss/abstracts/all-abstracts" as *;
 #rsvp-section {
-	background: url("@assets/images/bg-rsvp-gradient.webp") no-repeat center / cover;
+	background: linear-gradient(90deg, #80cde4 0%, #74add8 24.99%, #657bc5 50.01%, #5f60b3 74.66%, #4d4197 100%);
 	text-align: center;
 	// margin: $section-margin-vertical 0;
 	h2 {
@@ -24,6 +24,10 @@
 		@include breakpoint(lg) {
 			width: fit-content;
 		}
+	}
+
+	@include breakpoint(med) {
+		margin-bottom: 2.5rem;
 	}
 }
 

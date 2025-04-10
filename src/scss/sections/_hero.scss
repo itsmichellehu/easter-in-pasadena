@@ -7,7 +7,8 @@ $hero-spacing: 2rem;
 	text-align: center;
 	padding: 3rem 0;
 	color: white;
-	background: url("assets/images/bg-hero-gradient.webp") no-repeat center center/cover;
+	background: linear-gradient(90deg, #80cde4 0%, #74add8 24.99%, #657bc5 50.01%, #5f60b3 74.66%, #4d4197 100%);
+
 	background-size: 100% 100%;
 	width: 100%;
 	margin: 0;
@@ -17,15 +18,13 @@ $hero-spacing: 2rem;
 		object-fit: cover;
 	}
 
-	&__logo-wrapper {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 1.5rem;
+	.easter-expressions-logo {
+		width: 13rem;
+		margin: auto;
+		margin-bottom: 1rem;
 
-		svg {
-			width: 10rem;
-			margin: auto;
+		@include breakpoint(lg) {
+			width: 15rem;
 		}
 	}
 
@@ -58,6 +57,7 @@ $hero-spacing: 2rem;
 
 	&__easter-text-logo {
 		width: 12rem;
+		margin-bottom: 1.5rem;
 
 		@include breakpoint(med) {
 			width: 16.18456rem;
@@ -136,6 +136,12 @@ $hero-spacing: 2rem;
 
 	&__intro {
 		max-width: 50rem;
+		margin: auto;
+		font-size: 1.125rem;
+
+		@include breakpoint(lg) {
+			font-size: 1.35rem;
+		}
 	}
 
 	&__tagline {
@@ -167,16 +173,19 @@ $hero-spacing: 2rem;
 	}
 
 	&__cta-group {
+		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		gap: 1rem;
-		margin: 1.5rem auto;
+		margin: 1.5rem auto 0;
 		width: 90%;
 
 		a {
 			width: 90%;
-
-			@include breakpoint(med) {
+		}
+		@include breakpoint(med) {
+			flex-direction: row;
+			a {
 				width: unset;
 				flex: 1;
 				max-width: fit-content;
@@ -186,17 +195,17 @@ $hero-spacing: 2rem;
 
 	&__promo {
 		font-size: 0.875rem;
-		text-transform: uppercase;
+		// text-transform: uppercase;
 		margin: 1.5rem auto;
 		width: fit-content;
 
 		p {
-			font-size: 1.25rem;
+			font-size: 1.15rem;
 			font-weight: 500;
 			margin-bottom: 0.5rem;
 
 			@include breakpoint(med) {
-				font-size: 1.625rem;
+				font-size: 1.25rem;
 			}
 		}
 
@@ -218,13 +227,15 @@ $hero-spacing: 2rem;
 		align-items: center;
 	}
 
-	&__rosebud-logo {
-		a,
-		img {
-			padding: 0;
-			margin: 0;
-			height: 31px;
-		}
+	&__rosebud {
+		background-image: url("@assets/images/rosebud-coffee-pasadena-logo.webp");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		padding: 0;
+		margin: 0;
+		height: 2rem;
 	}
 
 	&__deadline {

@@ -8,7 +8,7 @@ ol {
 	gap: 0.5rem;
 	text-align: left;
 	list-style-position: outside;
-	margin-left: - calc($list-bullet-text-spacing);
+	margin-left: -calc($list-bullet-text-spacing);
 	padding: 0;
 
 	li {
@@ -24,10 +24,6 @@ ol {
 
 		@include breakpoint(med) {
 			font-size: 1.125rem;
-		}
-
-		@include breakpoint(lg) {
-			font-size: 1.25rem;
 		}
 	}
 
@@ -53,7 +49,6 @@ ol {
 }
 
 .list-transform-none {
-
 	&.gap-8 {
 		li {
 			margin-bottom: 0.5rem;
@@ -142,7 +137,6 @@ ul.list-none {
 }
 
 ul.list-item-black {
-
 	li {
 		color: $black;
 	}

@@ -17,10 +17,10 @@
 	&__columns {
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
 
 		@media (min-width: 768px) {
 			flex-direction: row;
+			gap: 2rem;
 		}
 	}
 

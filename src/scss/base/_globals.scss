@@ -19,7 +19,7 @@ html {
 }
 
 body {
-	font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 	color: white;
 	z-index: -1;
 	// background-image: url('https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/bg-texture-scaled.webp');
@@ -41,7 +41,6 @@ body {
 	height: 100%;
 	/* Prevent horizontal overflow */
 }
-
 
 //
 // ::-webkit-scrollbar-track {
@@ -129,14 +128,6 @@ a {
 
 	gap: 0.25rem;
 
-	@include breakpoint(med) {
-		font-size: 1.125rem;
-	}
-
-	@include breakpoint(lg) {
-		font-size: 1.25rem;
-	}
-
 	span.anchor-text {
 		font-weight: 400;
 		@include hover-underline-self($primary-teal);
@@ -147,7 +138,6 @@ a,
 a p {
 	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-
 
 figcaption {
 	margin-top: 1rem !important;

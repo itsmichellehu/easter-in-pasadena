@@ -51,7 +51,7 @@
 
 	&__heading {
 		font-size: 2.75rem;
-		font-weight: 800;
+		font-weight: 600;
 		// color: #6b46c1;
 		line-height: 1.2;
 		margin-bottom: 1rem;
@@ -80,7 +80,7 @@
 		li {
 			display: flex;
 			align-items: center;
-			gap: 1rem;
+			gap: 1.5rem;
 			margin-bottom: 1rem;
 
 			.icon {
@@ -97,7 +97,7 @@
 
 			small {
 				display: block;
-				font-size: 0.875rem;
+				font-size: 1rem;
 				color: $dark-grey;
 
 				@include breakpoint(med) {
@@ -138,7 +138,7 @@
 		&__heading {
 			font-family: Poppins;
 			font-size: 4.875rem;
-			font-weight: 700;
+			font-weight: 600;
 			line-height: 100%;
 			letter-spacing: 0.0975rem;
 			text-transform: uppercase;
@@ -181,7 +181,7 @@
 		text-align: left;
 		font-family: Poppins;
 		font-style: normal;
-		font-weight: 700;
+		font-weight: 600;
 		line-height: 100%;
 		/* 4.875rem */
 		letter-spacing: -0.14625rem;
@@ -196,7 +196,6 @@
 			-webkit-text-stroke-color: #6f61c9;
 			font-family: Poppins;
 			font-style: normal;
-			font-weight: 800;
 			line-height: 100%;
 			/* 4.875rem */
 			letter-spacing: 0.0975rem;
@@ -277,5 +276,9 @@
 	@include breakpoint(lg) {
 		margin-top: 0;
 		height: 100%;
+
+		&__card {
+			gap: 1.5rem;
+		}
 	}
 }
