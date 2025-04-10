@@ -5,7 +5,7 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "webpack serve --config webpack/webpack.dev.js",
-		"build": "webpack --config webpack/webpack.prod.js",
+		"build": "webpack --config webpack/webpack.prod.js && echo www.easterinpasadena.com > dist/CNAME",
 		"watch:sass": "npx sass --watch src/scss:dist/css --load-path=src/scss",
 		"watch": "npm-run-all --parallel watch:sass dev",
 		"clean": "rm -rf dist && npm run build",
