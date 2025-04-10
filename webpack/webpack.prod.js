@@ -14,39 +14,7 @@ const PATHS = {
 module.exports = merge(common, {
 	mode: "production",
 	devtool: false,
-	module: {
-		rules: [
-			{
-				test: /\.(scss|css)$/,
-				use: [
-					MiniCssExtractPlugin.loader,
-					"css-loader",
-					{
-						loader: "postcss-loader",
-						options: {
-							postcssOptions: {
-								plugins: [require("autoprefixer")]
-							}
-						}
-					},
-					{
-						loader: "sass-loader",
-						options: {
-							implementation: require("sass"),
-							sassOptions: {
-								includePaths: [path.resolve(__dirname, "../src/scss")],
-								outputStyle: "compressed"
-							}
-						}
-					}
-				]
-			}
-		]
-	},
 	plugins: [
-		new MiniCssExtractPlugin({
-			filename: "index.css"
-		}),
 		new PurgeCSSPlugin({
 			paths: glob.sync(`${PATHS.src}/**/*.{html,js,scss}`, { nodir: true }),
 			safelist: {

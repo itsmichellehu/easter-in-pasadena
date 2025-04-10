@@ -6,101 +6,103 @@ $button-bg-transition: 0.3s ease-in-out;
 
 .btn-primary,
 .btn-secondary {
-    display: flex;
-    border-radius: 3.125rem;
-    border-width: $button-border-width;
-    border-style: solid;
+	display: flex;
+	border-radius: 3.125rem;
+	border-width: $button-border-width;
+	border-style: solid;
 
-    justify-content: center;
-    align-items: center;
-    padding: 0 1.25rem;
-    gap: 0.5rem;
-    width: fit-content;
-    height: 3rem !important;
-    text-wrap: nowrap;
-    color: white !important;
-    font-weight: 500;
-    margin-bottom: 0 !important;
-    transition: $button-bg-transition;
-    font-size: 1.125rem;
+	justify-content: center;
+	align-items: center;
+	padding: unset 1.25rem;
+	gap: 0.5rem;
+	width: fit-content;
+	height: 3rem !important;
+	text-wrap: nowrap;
+	color: white !important;
+	font-weight: 500;
+	margin-bottom: 0 !important;
+	transition: $button-bg-transition;
+	font-size: 1.125rem;
 
-    @include breakpoint(med) {
-        height: 3rem !important;
-        padding: 0 1.5rem;
-    }
+	@include breakpoint(med) {
+		height: 3rem !important;
+		padding: unset 1.5rem;
+	}
 
-    &.btn-bg-white {
-        background: url('https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/primary-button-bg-min.png') no-repeat center center / cover;
-        background-color: rgba(255, 255, 255, 0.85);
-        color: $black !important;
-        border: 0;
-    }
+	&.btn-bg-white {
+		background: url("https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/primary-button-bg-min.png")
+			no-repeat center center / cover;
+		background-color: rgba(255, 255, 255, 0.85);
+		color: $black !important;
+		border: 0;
+	}
 
-    &.btn-bg-black {
-        background: $off-black !important;
-        border: 0;
-        background-image: url('https://vrwpaviv.elementor.cloud/wp-content/uploads/2025/02/bg-button-black-chalk.webp');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
+	&.btn-bg-black {
+		background: $off-black !important;
+		border: 0;
+		background-image: url("https://vrwpaviv.elementor.cloud/wp-content/uploads/2025/02/bg-button-black-chalk.webp");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
 
-        &:hover {
-            background-color: white !important;
-        }
-    }
+		&:hover {
+			background-color: white !important;
+		}
+	}
 }
 
 .btn-primary {
-    border: #A0D4DD solid $button-border-width;
-    background: url("https://vrwpaviv.elementor.cloud/wp-content/uploads/2025/01/bg-button-primary-teal.webp") center / 150% auto no-repeat;
-    // background: url('https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/primary-button-bg.png') no-repeat center center / cover;
+	border: #aad8e1 solid $button-border-width;
+	background: url("@assets/images/bg-primary-button.png") no-repeat center center / cover;
+	background: #34c4cccf;
+	// background: url('https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/primary-button-bg.png') no-repeat center center / cover;
 
-    &:hover {
-        border-color: white;
-        background: url("https://vrwpaviv.elementor.cloud/wp-content/uploads/2025/01/button-white-chalk-bg.webp") center / 110% auto no-repeat;
-    }
+	&:hover {
+		border-color: white;
+		background: url("https://vrwpaviv.elementor.cloud/wp-content/uploads/2025/01/button-white-chalk-bg.webp") center /
+			110% auto no-repeat;
+	}
 
-    &:active {
-        border: 2.5px solid #00798d;
-        background: linear-gradient(0deg,
-                rgba(0, 165, 176, 0.3) 0%,
-                rgba(0, 165, 176, 0.3) 100%),
-            url(https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/primary-button-bg-hover-image-only-min.png) 50% / cover no-repeat;
-    }
+	&:active {
+		border: 2.5px solid #00798d;
+		background: linear-gradient(0deg, rgba(0, 165, 176, 0.3) 0%, rgba(0, 165, 176, 0.3) 100%),
+			url(https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/primary-button-bg-hover-image-only-min.png)
+				50% / cover no-repeat;
+	}
 
-    &:visited {
-        background: url(https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/primary-button-bg.png) 50% / cover no-repeat;
-        color: white;
-    }
+	&:visited {
+		background: url(https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/primary-button-bg.png) 50% / cover
+			no-repeat;
+		color: white;
+	}
 }
 
 a {
-    cursor: pointer;
+	cursor: pointer;
 
-    a:hover {
-        color: white;
-    }
+	a:hover {
+		color: white;
+	}
 }
 
-
 .btn-secondary {
-    border-color: white !important;
-    background: transparent;
+	border-color: white !important;
+	background: transparent;
 
-    &:hover {
-        border-color: #00798d;
-        background-color: #cce2e6;
-        color: #00798d;
-    }
+	&:hover {
+		border-color: #00798d;
+		background-color: #cce2e6;
+		color: #00798d;
+	}
 
-    &:active {
-        border-color: var(--dark-teal);
-        background: var(--teal-background);
-        color: var(--dark-teal);
-    }
+	&:active {
+		border-color: var(--dark-teal);
+		background: var(--teal-background);
+		color: var(--dark-teal);
+	}
 }
 
 // Ensure that the button text is not underlined when the button is a link
 a.btn-primary,
 a.btn-secondary {
-    text-decoration: none;
+	text-decoration: none;
 }

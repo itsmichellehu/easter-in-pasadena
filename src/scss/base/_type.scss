@@ -27,7 +27,7 @@ h1,
 h2 {
 	position: relative;
 	display: inline-block;
-	color: $beige;
+	color: $white;
 	text-transform: uppercase;
 
 	.outlined {
@@ -39,7 +39,6 @@ h2 {
 		letter-spacing: 0.08rem;
 	}
 }
-
 
 p {
 	color: white;
@@ -84,7 +83,7 @@ h2 {
 	line-height: 100%;
 	letter-spacing: 0.005rem;
 	margin: 0 auto 2rem auto;
-	color: #FFF7E9;
+	color: #fff7e9;
 	text-align: center;
 	width: 100%;
 
@@ -114,7 +113,7 @@ h2 {
 }
 
 h3 {
-	color: #FFFCF6;
+	color: #fffcf6;
 	font-size: 2rem;
 	font-style: normal;
 	font-weight: 500;

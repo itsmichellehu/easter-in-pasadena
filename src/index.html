@@ -1,267 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
-		<title>Easter Sunday at Expressions Church</title>
-		<link
-			rel="stylesheet"
-			href="index.css"
-		/>
-		<!-- <link rel="stylesheet" href="css/main.min.css" /> -->
-		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-	</head>
 
-	<body>
-		<div class="texture-overlay"></div>
-		<header class="hero hide">
-			<div class="hero__content">
-				<p class="hero__invite">You're invited to</p>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Easter Sunday at Expressions Church</title>
+	<meta designer="Michelle Hu">
+</head>
+
+<body>
+	<div class="texture-overlay"></div>
+	<!-- <nav class="navbar">
+		<div class="navbar__logo"><img src="assets/images/expressions-church-logo-icon-black.png"
+				alt=""></div>
+		<ul class="navbar__menu">
+			<li><a href="#">About</a></li>
+			<li><a href="#">Schedule</a></li>
+			<li><a href="#" class="btn-primary show-med">RSVP</a></li>
+		</ul>
+	</nav> -->
+	<header class="hero section">
+		<div class="hero__content">
+			<div class="content-max-width">
+				<!-- <p class="hero__invite">Expressions Church Presents</p> -->
 				<div class="hero__logo-wrapper">
+					<img src="assets/images/logo-title-only.png" class="hero__easter-text-logo"
+						alt="Expressions Church " />
+					<!-- <img src="assets/images/expressions-church-logo.png"
+						class="hero__easter-text-logo" alt="" /> -->
 					<div class="easter-logo">
-						<img
-							src="assets/images/easter-graphic.webp"
-							alt="Easter Logo"
-						/>
+						<!-- <img src="assets/images/easter-graphic.webp" alt="Easter Logo" /> -->
 					</div>
-					<h1 class="hero__title">
-						<img
-							src="assets/images/easter-logo.webp"
-							class="hero__easter-text-logo"
-							alt=""
-						/>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="221"
-							height="40"
-							viewBox="0 0 221 40"
-							fill="none"
-							class="hero__sunday-text-logo"
-						>
-							<path
-								d="M14.1198 39.4801C11.5532 39.4801 9.24318 39.0401 7.18984 38.1601C5.13651 37.2435 3.52318 35.9601 2.34984 34.3101C1.17651 32.6601 0.589844 30.7351 0.589844 28.5351H7.29984C7.44651 30.1851 8.08818 31.5418 9.22484 32.6051C10.3982 33.6685 12.0298 34.2001 14.1198 34.2001C16.2832 34.2001 17.9698 33.6868 19.1798 32.6601C20.3898 31.5968 20.9948 30.2401 20.9948 28.5901C20.9948 27.3068 20.6098 26.2618 19.8398 25.4551C19.1065 24.6485 18.1715 24.0251 17.0348 23.5851C15.9348 23.1451 14.3948 22.6685 12.4148 22.1551C9.92151 21.4951 7.88651 20.8351 6.30984 20.1751C4.76984 19.4785 3.44984 18.4151 2.34984 16.9851C1.24984 15.5551 0.699844 13.6485 0.699844 11.2651C0.699844 9.06512 1.24984 7.14012 2.34984 5.49013C3.44984 3.84012 4.98984 2.57512 6.96984 1.69512C8.94984 0.815123 11.2415 0.375122 13.8448 0.375122C17.5482 0.375122 20.5732 1.31012 22.9198 3.18012C25.3032 5.01346 26.6232 7.54346 26.8798 10.7701H19.9498C19.8398 9.37679 19.1798 8.18512 17.9698 7.19512C16.7598 6.20512 15.1648 5.71012 13.1848 5.71012C11.3882 5.71012 9.92151 6.16846 8.78484 7.08512C7.64818 8.00179 7.07984 9.32179 7.07984 11.0451C7.07984 12.2185 7.42818 13.1901 8.12484 13.9601C8.85818 14.6935 9.77484 15.2801 10.8748 15.7201C11.9748 16.1601 13.4782 16.6368 15.3848 17.1501C17.9148 17.8468 19.9682 18.5435 21.5448 19.2401C23.1582 19.9368 24.5148 21.0185 25.6148 22.4851C26.7515 23.9151 27.3198 25.8401 27.3198 28.2601C27.3198 30.2035 26.7882 32.0368 25.7248 33.7601C24.6982 35.4835 23.1765 36.8768 21.1598 37.9401C19.1798 38.9668 16.8332 39.4801 14.1198 39.4801Z"
-								fill="white"
-							/>
-							<path
-								d="M41.4832 0.870122V25.2351C41.4832 28.1318 42.2349 30.3135 43.7382 31.7801C45.2782 33.2468 47.4049 33.9801 50.1182 33.9801C52.8682 33.9801 54.9949 33.2468 56.4982 31.7801C58.0382 30.3135 58.8082 28.1318 58.8082 25.2351V0.870122H65.0782V25.1251C65.0782 28.2418 64.3999 30.8818 63.0432 33.0451C61.6865 35.2085 59.8715 36.8218 57.5982 37.8851C55.3249 38.9485 52.8132 39.4801 50.0632 39.4801C47.3132 39.4801 44.8015 38.9485 42.5282 37.8851C40.2915 36.8218 38.5132 35.2085 37.1932 33.0451C35.8732 30.8818 35.2132 28.2418 35.2132 25.1251V0.870122H41.4832Z"
-								fill="white"
-							/>
-							<path
-								d="M105.197 39.0951H98.9268L80.0618 10.5501V39.0951H73.7918V0.815123H80.0618L98.9268 29.3051V0.815123H105.197V39.0951Z"
-								fill="white"
-							/>
-							<path
-								d="M126.466 0.870122C130.536 0.870122 134.092 1.65846 137.136 3.23512C140.216 4.77512 142.581 7.01179 144.231 9.94512C145.917 12.8418 146.761 16.2335 146.761 20.1201C146.761 24.0068 145.917 27.3801 144.231 30.2401C142.581 33.1001 140.216 35.3001 137.136 36.8401C134.092 38.3435 130.536 39.0951 126.466 39.0951H113.981V0.870122H126.466ZM126.466 33.9801C130.939 33.9801 134.367 32.7701 136.751 30.3501C139.134 27.9301 140.326 24.5201 140.326 20.1201C140.326 15.6835 139.134 12.2185 136.751 9.72512C134.367 7.23179 130.939 5.98512 126.466 5.98512H120.251V33.9801H126.466Z"
-								fill="white"
-							/>
-							<path
-								d="M176.57 31.2851H160.565L157.815 39.0951H151.27L164.965 0.815123H172.225L185.92 39.0951H179.32L176.57 31.2851ZM174.81 26.1701L168.595 8.40512L162.325 26.1701H174.81Z"
-								fill="white"
-							/>
-							<path
-								d="M220.749 0.870122L208.099 25.2351V39.0951H201.829V25.2351L189.124 0.870122H196.109L204.964 19.6251L213.819 0.870122H220.749Z"
-								fill="white"
-							/>
-						</svg>
+					<h1 class="hero__title hide">
+						<br>
 					</h1>
-					<p class="uppercase italic at-expressions-church">At Expressions Church</p>
-				</div>
-				<p class="hero__tagline">Celebrate Easter in Pasadena in Our New Home!</p>
-				<div class="date-time-location flex-col">
-					<p class="hero__date">April 20, 2025 | 10:00 AM</p>
-					<a href="#">2540 E. Orange Grove Blvd, Pasadena</a>
-				</div>
-
-				<div class="hero__promo">
-					<p>
-						Free coffee for first 100 RSVPS!
-
-						<a
-							href="https://www.rosebudcoffee.com/"
-							target="_blank"
-						>
-							<img
-								src="assets/images/rosebud-coffee-pasadena-logo.webp"
-								alt="Rosebud Logo"
-								class="hero__rosebud"
-							/>
-						</a>
+					<div class="flex-col items-center">
+						<h1 class="hide">Easter Sunday</h1>
+						<img src="assets/images/easter-text-logo.webp"
+							class="hero__easter-text-logo" alt="" />
+						<p class="easter-sunday-text">Sunday</p>
+					</div>
+					<p class="uppercase italic at-expressions-church margin-0 hide">At Expressions
+						Church
 					</p>
-					<p class="hero__deadline hide">(RSVP by Wed, April 18 at 6 PM)</p>
 				</div>
-				<div class="hero__cta-group flex">
-					<a
-						href="#"
-						class="btn-primary"
-						>RSVP to Easter Sunday</a
-					>
-					<a
-						href="#"
-						class="btn-secondary"
-						>Visit Expressions Church Website</a
-					>
-				</div>
+				<p class="hero__tagline text-center">Celebrate Easter in Pasadena in Our New Home!
+				</p>
 			</div>
-		</header>
-
-		<section class="easter-pre-events">
-			<div class="easter-pre-events__wrapper">
+			<div class="date-time-location flex-col items-center width-100">
+				<p class="hero__date">April 20, 2025 | 10:00 AM</p>
+				<a href="#">2540 E. Orange Grove Blvd, Pasadena</a>
+			</div>
+			<div class="hero__promo content-max-width">
+				<p>
+					Free coffee for first 100 RSVPS from
+				</p>
+				<a href="https://www.rosebudcoffee.com/" target="_blank">
+					<img src="assets/images/rosebud-coffee-pasadena-logo.webp" alt="Rosebud Logo"
+						class="hero__rosebud" />
+				</a>
+				<p class="hero__deadline hide">(RSVP by Wed, April 18 at 6 PM)</p>
+			</div>
+			<div class="hero__cta-group flex items-center">
+				<a href="https://expressions.churchcenter.com/people/forms/902688" target="_blank"
+					class="btn-primary hero__rsvp-btn">RSVP to Easter Sunday</a>
+				<a href="https://www.expressionschurch.com" target="_blank" class="btn-secondary">
+					Visit
+					Our Website
+				</a>
+			</div>
+		</div>
+	</header>
+	<section class="easter-events section">
+		<div class="easter-events__wrapper">
+			<div class="easter-events__event-container easter-events__easter-sunday">
 				<div>
-					<h2 class="easter-pre-events__heading"><span>Easter</span> <span>Sunday</span></h2>
-					<p class="easter-pre-events__intro">
-						Join us to enjoy <strong>community breakfast, Easter Bunny & Egg Hunt & Prizes</strong> for
+					<h2 class="easter-events__heading"><span class="outlined">Easter</span>
+						Sunday
+					</h2>
+					<p class="easter-events__intro">
+						Join us to enjoy <strong>community breakfast, Easter Bunny & Egg Hunt &
+							Prizes</strong> for
 						kids, a moving message of <strong>healing and renewal</strong>, and more!
 					</p>
 				</div>
-				<div class="easter-pre-events__content">
-					<div class="easter-pre-events__image">
-						<img
-							src="assets/images/expressions-church-gathering.webp"
-							alt="Easter Service"
-						/>
-					</div>
-					<!-- Right Column: Details -->
-					<div class="easter-pre-events__details">
-						<ul class="easter-pre-events__info">
-							<li>
-								<img
-									class="icon"
-									src="assets/svg/easter/ic-shirt.svg"
-									alt=""
-								/>
-								<div class="height-auto">
-									<p>Breakfast Starts at 9:30 AM</p>
-									<small>with Rosebud Coffee</small>
-								</div>
-							</li>
-							<li>
-								<img
-									class="icon"
-									src="assets/svg/easter/ic-shirt.svg"
-									alt=""
-								/>
-								<div>
-									<p>Kids Program & Games</p>
-									<small>Childcare is available</small>
-								</div>
-							</li>
-							<li>
-								<img
-									class="icon"
-									src="assets/svg/easter/ic-shirt.svg"
-									alt=""
-								/>
-								<p>Free On-Site Parking</p>
-							</li>
-							<li>
-								<img
-									class="icon"
-									src="assets/svg/easter/ic-shirt.svg"
-									alt=""
-								/>
-								<small>No Dress Code Enforced — Come as you are</small>
-							</li>
-							<li>
-								<img
-									class="icon"
-									src="assets/svg/easter/ic-shirt.svg"
-									alt=""
-								/>
-								<p>Free Event — Open to All!</p>
-							</li>
-						</ul>
-						<div class="easter-pre-events__buttons">
-							<a
-								href="#"
-								class="btn btn--primary"
-								>RSVP to Easter Sunday</a
-							>
-							<a
-								href="#"
-								class="btn btn--secondary"
-								>See Full Schedule</a
-							>
+				<div class="easter-events__content">
+					<div class="easter-events__content">
+						<div class="easter-events__image">
+							<img src="assets/images/expressions-church-gathering.webp"
+								alt="Easter Service" />
 						</div>
-						<!-- Pre-Easter Events -->
-						<div class="pre-events">
-							<h3 class="pre-events__heading">Pre-Easter Events</h3>
-							<p class="pre-events__desc">After Sunday Service on April 13th, join us for _____.</p>
-							<div class="pre-events__card">
-								<div class="date">
-									<p>April</p>
-									<p class="day">13</p>
-								</div>
-								<div class="info">
-									<p class="name">Cookies & Community</p>
-									<p class="time">After Sunday Service</p>
-								</div>
+						<!-- Right Column: Details -->
+						<div>
+							<div class="easter-events__details bg-paper">
+								<ul class="easter-events__info">
+									<li>
+										<img class="icon" src="assets/svg/ic-free-button.svg"
+											alt="" />
+										<div class="height-auto">
+											<p>Free Event—Open to All!</p>
+										</div>
+									</li>
+									<li>
+										<img class="icon" src="assets/svg/ic-utensils.svg" alt="" />
+										<div class="height-auto">
+											<p>Breakfast Starts at 9:30 AM</p>
+											<small>with Rosebud Coffee</small>
+										</div>
+									</li>
+									<li>
+										<img class="icon" src="assets/svg/ic-easter-bunny.svg"
+											alt="" />
+										<div>
+											<p>Easter Bunny Photo Booth</p>
+										</div>
+									</li>
+									<li>
+										<img class="icon" src="assets/svg/ic-easter-egg.svg"
+											alt="" />
+										<div>
+											<p>Egg Hunt & Lawn Games</p>
+											<small>Each kid gets a prize!</small>
+										</div>
+									</li>
+									<li>
+										<img class="icon" src="assets/svg/ic-stroller.svg" alt="" />
+										<div>
+											<p>Kids Program</p>
+											<small>Childcare Available</small>
+										</div>
+									</li>
+									<li>
+										<img class="icon" src="assets/svg/ic-parking.svg" alt="" />
+										<p>Free On-Site Parking</p>
+									</li>
+									<li>
+										<img class="icon" src="assets/svg/ic-shirt.svg" alt="" />
+										<p>No Dress Code — Come as you are</p>
+									</li>
+								</ul>
+								<!-- Pre-Easter Events -->
 							</div>
-							<div class="pre-events__card">
-								<div class="date">
-									<p>April</p>
-									<p class="day">06</p>
-								</div>
-								<div class="info">
-									<p class="name">Sundae Sunday</p>
-									<p class="time">After Sunday Service</p>
-								</div>
-							</div>
+							<!-- <div class="easter-events__buttons">
+								<a href="#" class="btn-primary">RSVP to Easter Sunday</a>
+								<a href="#" class="btn-secondary">See Full Schedule</a>
+							</div> -->
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-
-		<section class="schedule">
-			<h2 class="schedule__title">Easter <span>Sunday Schedule</span></h2>
+			<div class="easter-events__event-container pre-events">
+				<div class="easter-events__content-wrapper">
+					<h2 class="easter-events__heading"><span class="outlined">Socials</span>
+						<!-- <br>
+						Socials -->
+					</h2>
+					<p class="easter-events__intro">Get ready to hop into Easter with us at
+						Expressions
+						Church! Before our big Easter Sunday celebration, we’re kicking things off
+						with two fun-filled Sundays:</p>
+					<div class="pre-events__card">
+						<div>
+							<p class="margin-0 date">April</p>
+							<p class="day margin-0">13</p>
+						</div>
+						<div class="info">
+							<p class="name">Cookies & Community</p>
+							<small>After service, create your own sundae and connect with others
+								over sweet scoops and smiles.</small>
+						</div>
+					</div>
+					<div class="pre-events__card">
+						<div>
+							<p class="margin-0 date">April</p>
+							<p class="day margin-0 sundae-">06</p>
+						</div>
+						<div class="info">
+							<p class="name">Sundae Sunday</p>
+							<small>Enjoy fresh-baked cookies and meaningful conversations with our
+								vibrant community.</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="schedule section">
+		<div class="section-content">
+			<h2>
+				<span><span class="outlined">Sunday</span> Schedule</span>
+			</h2>
 			<div class="schedule__columns">
 				<div class="schedule__block">
-					<div class="time">9:30 AM – 10:00 AM</div>
-					<h3>Continental Breakfast</h3>
-					<img
-						src="breakfast.jpg"
-						alt="Breakfast"
-					/>
-					<p>Enjoy light breakfast and coffee from Rosebud. First 100 RSVPs get a latte on us!</p>
-					<a
-						href="#"
-						class="btn"
-						>RSVP for Easter Sunday</a
-					>
+					<div class="time">
+						<p>9:30 AM – 10:00 AM</p>
+					</div>
+					<div class="schedule__content-wrapper">
+						<h3>Continental Breakfast</h3>
+						<img src="assets/images/expressions-church-members-lunch.webp"
+							alt="Breakfast" />
+						<p>
+							Come early for a light breakfast, great company, and delicious coffee
+							from <a href="https://www.rosebudcoffee.com/" target="_blank"
+								class="black">
+								Rosebud Coffee</a> by <a href="https://www.coffeewithacause.org/"
+								class="black">Coffee With A
+								Cause</a> (a Pasadena
+							café that
+							empowers
+							at-risk
+							youth through
+							job training)!
+						</p>
+						<!-- <p class="schedule__promo">FIRST 100 RSVPs GET A FREE LATTE ON US!</p> -->
+						<a href="#" class="btn-primary width-100">RSVP for Easter Sunday</a>
+					</div>
+					<div class="schedule__content-wrapper">
+						<h3>Got kids? Check them in!</h3>
+						<img src="assets/images/sunday-school-check-in.webp" alt="Breakfast" />
+						<p>
+							Did you know we have a <strong>program for kids ages 3-10</strong> and
+							<strong>childcare</strong> at Expressions Church? Register your child
+							before
+							service with the
+							laptop at the Check-In table in the lobby. Our team will help you get
+							set
+							up.
+						</p>
+						<a href="https://www.expressionschurch.com/kids" target="_blank"
+							class="btn-primary width-100">Discover Expressions Kids</a>
+					</div>
 				</div>
 				<div class="schedule__block">
-					<div class="time">10:00 AM – 11:30 AM</div>
-					<h3>Family Worship</h3>
-					<img
-						src="worship.jpg"
-						alt="Worship"
-					/>
-					<p>Live music and a message of hope and renewal.</p>
-					<a
-						href="#"
-						class="btn"
-						>Watch our latest message</a
-					>
+					<div class="time">
+						<p>10:00 AM – 11:30 AM</p>
+					</div>
+					<div class="schedule__content-wrapper">
+						<h3>Family Worship & Sermon</h3>
+						<img src="assets/images/expressions-church-worship-team.webp"
+							alt="Worship" />
+						<p>Our Easter Sunday service will begin at 10AM with
+							<strong>live worship music</strong>—blend of contemporary Christian
+							songs and heartfelt melodies. Following worship, our lead pastor
+							Christopher will share
+							<strong>
+								a message of
+								hope and renewal
+							</strong>.
+						</p>
+						<a href="https://www.expressionschurch.com/sermons" target="_blank"
+							class="btn-primary">Watch our latest sermon</a>
+					</div>
+					<div class="schedule__content-wrapper">
+						<h3>Expressions Kids</h3>
+						<img src="assets/images/pasadena-sunday-school-class.webp" alt="Worship" />
+						<p>
+							After worship, children are dismissed to their own fun, [mention what
+							they
+							do] meet their
+							teachers at the back of the sanctuary to head to class.
+						</p>
+						<a href="https://www.expressionschurch.com/sermons" target="_blank"
+							class="btn-primary">Learn more</a>
+					</div>
 				</div>
 				<div class="schedule__block">
-					<div class="time">11:30 AM – 12:30 PM</div>
-					<h3>Family Fun & Games</h3>
-					<img
-						src="games.jpg"
-						alt="Games"
-					/>
-					<ul>
-						<li>Meet the Easter Bunny</li>
-						<li>Egg Hunts for kids</li>
-						<li>Lawn games</li>
-						<li>Photo ops & treats</li>
-					</ul>
+					<div class="time">
+						<p>11:30 AM – 12:30 PM</p>
+					</div>
+					<div class="schedule__content-wrapper">
+						<h3>Family Fun & Games</h3>
+						<img src="assets/images/kids-playing.webp" alt="Worship" />
+						<p>We’re keeping the celebration going after service with:</p>
+						<ul>
+							<li>🐰 Meet the Easter Bunny</li>
+							<li>🥚 Egg Hunts with prizes for kids of all ages</li>
+							<li>⚽️ Lawn games and family activities</li>
+							<li>📸 Photo ops and sweet treats</li>
+						</ul>
+					</div>
+					<div class="schedule__content-wrapper">
+						<h3>Baptisms</h3>
+						<!-- <img src="assets/images/kids-playing.webp" alt="Worship" /> -->
+						<p>
+							For those who are ready to commit their life to Christ, we have baptism
+							available. You can
+							witness (or experience!) this declaration of life transformation.
+						</p>
+						<p class="fw-semibold primary-teal text-medium">
+							Ready to take this next step of faith? Curious about baptism?
+						</p>
+						<p>Sign up and we'll reach out!</p>
+						<a href="https://www.expressionschurch.com/baptism" target="_blank"
+							class="btn-primary">Sign up for Baptism</a>
+						<!-- <a
+								href="#"
+								class="btn-secondary bg-black"
+								>Learn more about baptism</a> -->
+					</div>
 				</div>
 			</div>
-		</section>
-		<script src="index.js"></script>
-	</body>
+		</div>
+	</section>
+	<section id="rsvp-section" class="section">
+		<div class="section-content">
+			<h2>
+				<span class="outlined">RSVP</span> to Easter Sunday
+			</h2>
+			<p class="subtitle">We’re excited to celebrate Easter with you!</p>
+			<p class="rsvp__desc">
+				Please RSVP so we can plan for
+				breakfast and kids
+				programming!
+			</p>
+			<a href="https://expressions.churchcenter.com/people/forms/902688" target="_blank"
+				class="btn-primary">RSVP
+				to Easter Sunday</a>
+		</div>
+	</section>
+	<script src="index.js"></script>
+</body>
+
 </html>

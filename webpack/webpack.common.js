@@ -1,5 +1,6 @@
 // webpack/webpack.common.js
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
@@ -23,6 +24,10 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.html$/,
+				use: "html-loader"
+			},
+			{
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
@@ -30,8 +35,30 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.html$/,
-				use: "html-loader"
+				test: /\.(scss|css)$/,
+				exclude: [/\.styles.scss$/, /node_modules/],
+				use: [
+					MiniCssExtractPlugin.loader,
+					"css-loader",
+					{
+						loader: "postcss-loader",
+						options: {
+							postcssOptions: {
+								plugins: [require("autoprefixer")]
+							}
+						}
+					},
+					{
+						loader: "sass-loader",
+						options: {
+							implementation: require("sass"),
+							sassOptions: {
+								includePaths: [path.resolve(__dirname, "src/scss")],
+								outputStyle: "expanded"
+							}
+						}
+					}
+				]
 			},
 			{
 				test: /\.(woff2?|ttf|otf|eot)$/,
@@ -60,6 +87,9 @@ module.exports = {
 				{ from: path.resolve(__dirname, "../src/assets/svg"), to: "assets/svg", noErrorOnMissing: true },
 				{ from: path.resolve(__dirname, "../src/assets/fonts"), to: "assets/fonts", noErrorOnMissing: true }
 			]
+		}),
+		new MiniCssExtractPlugin({
+			filename: "css/[name].css"
 		})
 	]
 };

@@ -3,17 +3,23 @@
 // Hero
 .hero {
 	text-align: center;
-	padding: 3rem 0;
+	padding: 2rem 0 3rem 0;
 	color: white;
 	background: url("assets/images/bg-hero-gradient.webp") no-repeat center center/cover;
 	background-size: 100% 100%;
 	width: 100%;
+	margin: 0;
+
+	&__rsvp-btn {
+		background: url("@assets/images/btn-rsvp-hero.webp");
+		object-fit: cover;
+	}
 
 	&__logo-wrapper {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 1rem;
+		gap: 1.5rem;
 
 		svg {
 			width: 10rem;
@@ -25,6 +31,12 @@
 		font-size: 0.875rem;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
+		width: fit-content;
+		margin: 0 auto 2rem auto;
+
+		@include breakpoint(med) {
+			font-size: 1.25rem;
+		}
 	}
 
 	.easter-logo {
@@ -32,44 +44,80 @@
 		height: fit-content;
 
 		img {
-			object-fit: contain;
+			object-fit: cover;
+			width: 100%;
+		}
+
+		@include breakpoint(med) {
+			width: 5.763rem;
+			margin-bottom: 0.5rem;
 		}
 	}
 
 	&__easter-text-logo {
 		width: 12rem;
-	}
 
-	&__title {
-		font-size: 3rem;
-		font-weight: bold;
-		margin: 0;
-		text-align: center;
-		span {
-			display: inline-block;
+		@include breakpoint(med) {
+			width: 16.18456rem;
 		}
 	}
+	.easter-sunday-text {
+		font-size: 3rem;
+		text-align: center;
+		line-height: 90%;
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+	//
+	// 	&__title {
+	// 		font-size: 3rem;
+	// 		font-weight: bold;
+	// 		margin: 0;
+	// 		text-align: center;
+	// 		span {
+	// 			display: inline-block;
+	// 		}
+	// 	}
 
 	.date-time-location {
-		padding: 1rem;
+		padding: 1rem 0;
 		background: linear-gradient(
 			90deg,
 			rgba(91, 99, 209, 0) -22.38%,
 			rgba(64, 69, 150, 0.6) 52.56%,
 			rgba(91, 99, 209, 0) 128.95%
 		);
-		width: 100%;
+		width: 100% !important;
 		p,
 		a {
 			margin: 0;
-			font-size: 1rem;
 			text-transform: uppercase;
 			font-weight: 500;
 			line-height: 155%;
 		}
 
+		p {
+			font-size: 1.25rem;
+		}
+
 		a {
 			text-decoration: underline;
+		}
+
+		@include breakpoint(med) {
+			background: linear-gradient(
+					90deg,
+					rgba(91, 99, 209, 0) 5.5%,
+					rgba(64, 69, 150, 0.6) 49.65%,
+					rgba(91, 99, 209, 0) 94.66%
+				)
+				no-repeat center center/cover;
+			background-size: 100%;
+
+			p,
+			a {
+				font-size: 1.5rem;
+			}
 		}
 	}
 
@@ -77,6 +125,10 @@
 		font-style: italic;
 		font-size: 1.25rem;
 		font-weight: 500;
+
+		@include breakpoint(med) {
+			font-size: 1.75rem;
+		}
 	}
 
 	&__tagline {
@@ -84,42 +136,71 @@
 		text-align: center;
 		font-size: 1.9375rem;
 		font-style: normal;
-		font-weight: 600;
+		font-weight: 500;
 		line-height: 120%; /* 2.325rem */
 		letter-spacing: -0.02rem;
-		margin-top: 0.5rem;
+		margin: 2rem 0;
+
+		@include breakpoint(med) {
+			color: #fff;
+			text-align: center;
+			font-family: Poppins;
+			font-size: 2.75rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 115%; /* 3.1625rem */
+			letter-spacing: -0.0275rem;
+			margin: 3rem 0;
+		}
 	}
 
 	&__date {
 		margin: 0.5rem 0 1.5rem;
-		font-size: 1.25rem !important;
+		font-size: 1.25rem;
 	}
 
 	&__cta-group {
-		flex-wrap: wrap;
+		flex-direction: column;
 		justify-content: center;
 		gap: 1rem;
-		margin: 1.5rem 0;
+		margin: 1.5rem auto;
+		width: 90%;
 
 		a {
 			width: 90%;
+
+			@include breakpoint(med) {
+				width: unset;
+				flex: 1;
+				max-width: fit-content;
+			}
 		}
 	}
 
 	&__promo {
 		font-size: 0.875rem;
 		text-transform: uppercase;
-		margin: 1.5rem 0;
+		margin: 1.5rem auto;
+		width: fit-content;
 
 		p {
 			font-size: 1.25rem;
 			font-weight: 500;
 			margin-bottom: 0.5rem;
+
+			@include breakpoint(med) {
+				font-size: 1.625rem;
+			}
 		}
 
 		img {
 			height: 1.5rem;
 			margin: 0.5rem auto;
+
+			@include breakpoint(med) {
+				width: 10rem;
+				height: auto;
+			}
 		}
 	}
 
@@ -138,6 +219,22 @@
 
 		@include breakpoint(med) {
 			flex-direction: row;
+		}
+	}
+
+	@include breakpoint(lg) {
+		padding: 6rem 0 5rem 0;
+
+		.easter-sunday-text {
+			font-size: 3.85rem;
+		}
+
+		&__logo-wrapper {
+			gap: 2rem;
+		}
+
+		&__date {
+			font-size: 1.5rem;
 		}
 	}
 }

@@ -1,28 +1,29 @@
 @use "@scss/abstracts/all-abstracts" as *;
 
-.easter-pre-events {
+.easter-events {
 	width: 100%;
 
 	&__wrapper {
 		text-align: center;
-		padding: 3rem 1.5rem;
-		background-image: url("assets/images/bg-paper.webp");
-		color: $off-black;
 		width: 90%;
 		margin: auto;
 	}
+	//
+	// 	&__event-container {
+	// 		padding: 1rem;
+	// 		background-image: url("assets/images/bg-paper.webp");
+	// 	}
 
 	&__content {
+		// color: $off-black;
 		display: flex;
 		flex-direction: column;
-		gap: 2.5rem;
-		max-width: 1200px;
 		margin: 0 auto;
 
 		@media (min-width: 1024px) {
 			flex-direction: row;
 			align-items: flex-start;
-			gap: 4rem;
+			gap: 2rem;
 		}
 	}
 
@@ -38,19 +39,16 @@
 
 	&__details {
 		flex: 1;
+		padding: 1.5rem;
 	}
 
 	&__heading {
 		font-size: 2.75rem;
 		font-weight: 800;
-		color: #6b46c1;
+		// color: #6b46c1;
 		line-height: 1.2;
 		margin-bottom: 1rem;
 		display: none;
-
-		span {
-			display: block;
-		}
 
 		@include breakpoint(med) {
 			display: block;
@@ -60,17 +58,17 @@
 	&__intro {
 		font-size: 1.125rem;
 		margin-bottom: 1.5rem;
-		color: #333;
+		// color: #333;
 
 		strong {
-			font-weight: 600;
+			font-weight: 500;
+			// color: $accent-teal;
 		}
 	}
 
 	&__info {
 		list-style: none;
 		padding: 0;
-		margin: 2rem 0;
 		font-size: 1rem;
 
 		li {
@@ -81,7 +79,7 @@
 
 			.icon {
 				font-size: 1.25rem;
-				color: #6b46c1;
+				// color: #6b46c1;
 				flex-shrink: 0;
 			}
 
@@ -94,7 +92,11 @@
 			small {
 				display: block;
 				font-size: 0.875rem;
-				color: #555;
+				color: $dark-grey;
+
+				@include breakpoint(med) {
+					font-size: 1rem;
+				}
 			}
 		}
 	}
@@ -103,56 +105,102 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
-
-		@media (min-width: 600px) {
-			flex-direction: row;
-		}
+		margin-top: 2rem;
 
 		a {
 			text-align: center;
+		}
+	}
+
+	@include breakpoint(xl) {
+		p,
+		h2 {
+			text-align: left;
+		}
+
+		&__wrapper {
+			display: grid;
+			gap: 4rem;
+			grid-template-columns: 2fr 1fr;
+			align-items: start;
+		}
+		//
+		// 		&__event-container {
+		// 			padding: 3rem;
+		// 		}
+
+		&__heading {
+			font-family: Poppins;
+			font-size: 4.875rem;
+			font-weight: 700;
+			line-height: 100%;
+			letter-spacing: 0.0975rem;
+			text-transform: uppercase;
+			margin-bottom: 2rem;
+
+			.outlined {
+				-webkit-text-stroke-width: 2.25px;
+				// -webkit-text-stroke-color: #6f61c9;
+				font-style: normal;
+			}
+		}
+
+		&__info {
+			padding: 0;
+		}
+
+		&__intro {
+			font-size: 1.35rem;
 		}
 	}
 }
 
 // ===== Buttons =====
 
-.btn {
+.btn-primary,
+.btn-secondary {
 	display: inline-block;
 	padding: 0.75rem 1.5rem;
-	font-weight: 600;
-	border-radius: 9999px;
 	text-decoration: none;
 	transition: background 0.2s ease;
-
-	&--primary {
-		background: #06b6d4;
-		color: #fff;
-
-		&:hover {
-			background: #0891b2;
-		}
-	}
-
-	&--secondary {
-		background: #111;
-		color: #fff;
-
-		&:hover {
-			background: #333;
-		}
-	}
 }
 
 // ===== Pre-Easter Event Cards =====
 
 .pre-events {
-	margin-top: 3rem;
+	margin-top: 2rem;
 
 	&__heading {
-		font-size: 1.75rem;
+		color: #6f61c9;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
 		font-weight: 700;
-		color: #6b46c1;
-		margin-bottom: 0.5rem;
+		line-height: 100%;
+		/* 4.875rem */
+		letter-spacing: -0.14625rem;
+		text-transform: uppercase;
+		// font-size: 2.875rem;
+		margin-right: auto !important;
+		margin-left: 0 !important;
+
+		.outlined {
+			text-align: center;
+			-webkit-text-stroke-width: 2.25px;
+			-webkit-text-stroke-color: #6f61c9;
+			font-family: Poppins;
+			font-style: normal;
+			font-weight: 800;
+			line-height: 100%;
+			/* 4.875rem */
+			letter-spacing: 0.0975rem;
+			text-transform: uppercase;
+			color: transparent;
+		}
+		//
+		// 		@include breakpoint(med) {
+		// 			font-size: 3.875rem;
+		// 		}
 	}
 
 	&__desc {
@@ -162,40 +210,52 @@
 	}
 
 	&__card {
-		background: linear-gradient(to right, #6366f1, #a855f7);
+		background: url("@assets/images/bg-pre-events.png");
 		color: white;
 		display: flex;
-		justify-content: space-between;
+		gap: 2rem;
 		align-items: center;
-		padding: 1rem;
-		border-radius: 0.75rem;
+		padding: 1rem 1.5rem;
+		border-radius: 0.5rem;
 		margin-bottom: 1rem;
 
 		.date {
-			text-align: left;
+			text-align: center;
 
-			p:first-child {
-				font-size: 0.75rem;
-				text-transform: uppercase;
-			}
+			font-size: 1rem;
+			text-transform: uppercase;
+			letter-spacing: 0.05rem;
+		}
 
-			.day {
-				font-size: 2rem;
-				font-weight: bold;
-			}
+		.day {
+			font-size: 2.5rem;
+			font-weight: 600;
+			margin-bottom: 0;
+			text-align: center;
+			line-height: 100%;
 		}
 
 		.info {
-			text-align: right;
+			text-align: left;
 
 			.name {
 				font-weight: 600;
+				font-size: 1.5rem;
+				letter-spacing: 0.0225rem;
+				line-height: 115%;
+
 				margin-bottom: 0.25rem;
 			}
 
 			.time {
 				font-size: 0.875rem;
+				margin-bottom: 0;
 			}
 		}
+	}
+
+	@include breakpoint(lg) {
+		margin-top: 0;
+		height: 100%;
 	}
 }
