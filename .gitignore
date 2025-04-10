@@ -56,7 +56,7 @@ wp-image-optimizer/uploaded/*
 
 test.css
 test.html
-dist/
+
 /psd/
 src/assets/svg/content.png
 src/assets/svg/fire-relief-progress.png
