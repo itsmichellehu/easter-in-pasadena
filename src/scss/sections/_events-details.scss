@@ -21,7 +21,7 @@
 	&__content {
 		// color: $off-black;
 		display: flex;
-		flex-direction: column;
+		flex-direction: column-reverse;
 		margin: 0 auto;
 		gap: 1rem;
 
@@ -124,12 +124,12 @@
 			text-align: left;
 		}
 
-		// &__wrapper {
-		// 	display: grid;
-		// 	gap: 4rem;
-		// 	grid-template-columns: 2fr 1fr;
-		// 	align-items: start;
-		// }
+		&__wrapper {
+			display: grid;
+			gap: 4rem;
+			grid-template-columns: 2fr 1fr;
+			align-items: start;
+		}
 		//
 		// 		&__event-container {
 		// 			padding: 3rem;
@@ -174,7 +174,7 @@
 // ===== Pre-Easter Event Cards =====
 
 .pre-events {
-	margin-top: 2rem;
+	// margin-top: 2rem;
 
 	&__heading {
 		color: #6f61c9;
@@ -214,20 +214,20 @@
 		color: #444;
 		margin-bottom: 1.5rem;
 	}
-
-	.easter-events__content-wrapper {
-		@include breakpoint(lg) {
-			display: grid;
-			grid-template-columns: 2fr 1fr;
-			gap: 2rem;
-		}
-	}
+	//
+	// 	.easter-events__content-wrapper {
+	// 		@include breakpoint(lg) {
+	// 			display: grid;
+	// 			grid-template-columns: 2fr 1fr;
+	// 			gap: 2rem;
+	// 		}
+	// 	}
 
 	&__card {
 		background: url("@assets/images/bg-pre-events.png");
 		color: white;
 		display: flex;
-		gap: 2rem;
+		gap: 1rem;
 		align-items: center;
 		padding: 1rem 1.5rem;
 		border-radius: 0.5rem;
