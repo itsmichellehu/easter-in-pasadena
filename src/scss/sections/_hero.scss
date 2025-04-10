@@ -1,9 +1,11 @@
 @use "@scss/abstracts/all-abstracts" as *;
 
+$hero-spacing: 2rem;
+
 // Hero
 .hero {
 	text-align: center;
-	padding: 2rem 0 3rem 0;
+	padding: 3rem 0;
 	color: white;
 	background: url("assets/images/bg-hero-gradient.webp") no-repeat center center/cover;
 	background-size: 100% 100%;
@@ -88,6 +90,7 @@
 			rgba(91, 99, 209, 0) 128.95%
 		);
 		width: 100% !important;
+		margin: $hero-spacing 0;
 		p,
 		a {
 			margin: 0;
@@ -139,7 +142,7 @@
 		font-weight: 500;
 		line-height: 120%; /* 2.325rem */
 		letter-spacing: -0.02rem;
-		margin: 2rem 0;
+		margin: 0;
 
 		@include breakpoint(med) {
 			color: #fff;
@@ -201,6 +204,22 @@
 				width: 10rem;
 				height: auto;
 			}
+		}
+	}
+
+	&__logo-tagline {
+		display: flex;
+		flex-direction: column;
+		gap: $hero-spacing;
+		align-items: center;
+	}
+
+	&__rosebud-logo {
+		a,
+		img {
+			padding: 0;
+			margin: 0;
+			height: 31px;
 		}
 	}
 
