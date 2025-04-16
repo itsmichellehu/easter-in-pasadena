@@ -115,13 +115,21 @@
           <a
             href="https://expressions.churchcenter.com/people/forms/902688"
             target="_blank"
+            rel="noopener"
             class="btn-primary hero__rsvp-btn"
-            >RSVP to Easter Sunday</a
+            onclick="gtag('event', 'rsvp_click', {
+            event_category: 'engagement',
+            event_label: 'RSVP Link'
+          })"
           >
+            RSVP to Easter Sunday
+          </a>
+
           <a
             href="https://www.expressionschurch.com"
             target="_blank"
             class="btn-secondary"
+            rel="noopener"
           >
             Visit Our Website
           </a>
@@ -146,10 +154,21 @@
           <div class="easter-events__content">
             <div class="easter-events__content">
               <div class="easter-events__image">
-                <img
-                  src="assets/images/expressions-church-gathering.webp"
-                  alt="Easter Service"
-                />
+                <video
+                id="introVideo"
+muted
+                  controls
+                  width="100%"
+                  playsinline
+                  preload="none"
+                  poster="assets/images/intro-video-poster.png"
+                >
+                  <source
+                    src="assets/videos/easter-in-pasadena-introduction.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
               </div>
               <!-- Right Column: Details -->
               <div>
@@ -451,6 +470,35 @@
       </div>
     </section>
     <script src="index.js"></script>
+    <script>
+      const video = document.getElementById("introVideo");
+    
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            // Try to play when in view
+            video.play().catch(() => {
+              // If autoplay fails, wait for user interaction
+              const playAfterInteraction = () => {
+                video.play();
+                window.removeEventListener("click", playAfterInteraction);
+                window.removeEventListener("scroll", playAfterInteraction);
+              };
+    
+              window.addEventListener("click", playAfterInteraction);
+              window.addEventListener("scroll", playAfterInteraction);
+            });
+          } else {
+            video.pause();
+          }
+        },
+        { threshold: 0.5 } // Play when 50% of the video is visible
+      );
+    
+      observer.observe(video);
+    </script>
+    
+    
   </body>
   <footer class="section">
     <div class="section-content flex-col items-center">
