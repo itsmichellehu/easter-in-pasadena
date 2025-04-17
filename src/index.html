@@ -87,18 +87,21 @@
 			</div>
 			<div class="date-time-location flex-col items-center width-100">
 				<p class="hero__date">April 20, 2025 | 10:00 AM</p>
-				<a href="https://maps.app.goo.gl/7hK3PhJDAHmpwCc97">2540 E. Orange Grove Blvd.
+				<a id="heroAddress" href="https://maps.app.goo.gl/7hK3PhJDAHmpwCc97" onclick="gtag('event', 'address_click', {
+					event_category: 'engagement',
+					event_label: 'Hero Address Link'
+				  })">2540 E. Orange Grove Blvd.
 					Pasadena, CA</a>
 			</div>
 			<div class="hero__cta-group flex items-center">
-				<a href="https://expressions.churchcenter.com/people/forms/951327"
+				<a id="heroRSVPLink" href="https://expressions.churchcenter.com/people/forms/951327"
 					data-open-in-church-center-modal="true" class="btn-primary hero__rsvp-btn"
 					onclick="gtag('event', 'rsvp_click', {
             event_category: 'engagement',
             event_label: 'Top RSVP Link'
           })">RSVP to Easter Sunday!</a>
-				<a href="https://www.expressionschurch.com" target="_blank" class="btn-secondary"
-					rel="noopener">
+				<a id="heroVisitWebsite" href="https://www.expressionschurch.com" target="_blank"
+					class="btn-secondary" rel="noopener">
 					Visit Our Website
 				</a>
 			</div>
@@ -250,16 +253,21 @@
 						<p>
 							Come early for a light breakfast, great company, and delicious coffee
 							from
-							<a href="https://www.rosebudcoffee.com/" target="_blank" class="black">
+							<a id="rosebudCoffeeLink" href="https://www.rosebudcoffee.com/"
+								target="_blank" rel="noopener noreferrer" class="black">
 								Rosebud Coffee</a>
 							by
-							<a href="https://www.coffeewithacause.org/" class="black">Coffee With A
+							<a id="coffeeWithACauseLink" href="https://www.coffeewithacause.org/"
+								target="_blank" rel="noopener noreferrer" class="black">Coffee With
+								A
 								Cause</a>
 							(a Pasadena café that empowers at-risk youth through job training)!
 						</p>
 						<!-- <p class="schedule__promo">FIRST 100 RSVPs GET A FREE LATTE ON US!</p> -->
-						<a href="https://expressions.churchcenter.com/people/forms/902688"
-							target="_blank" class="btn-primary width-100">RSVP for Easter Sunday</a>
+						<a id="scheduleRsvpLink"
+							href="https://expressions.churchcenter.com/people/forms/902688"
+							target="_blank" rel="noopener noreferrer"
+							class="btn-primary width-100">RSVP for Easter Sunday</a>
 					</div>
 					<div class="schedule__content-wrapper">
 						<h3>Got kids? Check them in!</h3>
@@ -272,8 +280,11 @@
 							at the Check-In
 							table in the lobby. Our team will help you get set up.
 						</p>
-						<a href="https://www.expressionschurch.com/kids" target="_blank"
-							class="btn-primary width-100">Discover Expressions Kids</a>
+						<a id="scheduleDiscoverKidsLink"
+							href="https://www.expressionschurch.com/kids" target="_blank"
+							rel="noopener noreferrer" class="btn-primary width-100">Discover
+							Expressions
+							Kids</a>
 					</div>
 				</div>
 				<div class="schedule__block">
@@ -291,8 +302,9 @@
 							melodies. Following worship, our lead pastor Christopher will share
 							<strong> a message of hope and renewal</strong>.
 						</p>
-						<a href="https://www.expressionschurch.com/sermons" target="_blank"
-							class="btn-primary">Watch our latest sermon</a>
+						<a id="latestSermonsLink" href="https://www.expressionschurch.com/sermons"
+							target="_blank" rel="noopener noreferrer" class="btn-primary">Watch our
+							latest sermon</a>
 					</div>
 					<div class="schedule__content-wrapper">
 						<h3>Expressions Kids</h3>
@@ -302,8 +314,9 @@
 							following their teachers
 							to the class.
 						</p>
-						<a href="https://www.expressionschurch.com/kids" target="_blank"
-							class="btn-primary">Learn more</a>
+						<a id="learnMoreKidsLink" href="https://www.expressionschurch.com/kids"
+							target="_blank" rel="noopener noreferrer" class="btn-primary">Learn
+							more</a>
 					</div>
 				</div>
 				<div class="schedule__block">
@@ -333,8 +346,10 @@
 							Ready to take this next step of faith? Curious about baptism?
 						</p>
 						<p>Sign up and we'll reach out!</p>
-						<a href="https://expressions.churchcenter.com/people/forms/922445"
-							target="_blank" class="btn-primary">Sign up for Baptism</a>
+						<a id="baptismLink"
+							href="https://expressions.churchcenter.com/people/forms/922445"
+							rel="noopener noreferrer" target="_blank" class="btn-primary">Sign up
+							for Baptism</a>
 						<!-- <a
 								href="#"
 								class="btn-secondary bg-black"
@@ -353,14 +368,13 @@
 				<br />
 				So... RSVP now so we can plan for breakfast and activities for your little ones!
 			</p>
-			<a href="https://expressions.churchcenter.com/people/forms/951327"
-				data-open-in-church-center-modal="true" class="btn-primary hero__rsvp-btn" onclick="gtag('event', 'rsvp_click', {
-	event_category: 'engagement',
-	event_label: 'Bottom RSVP Link'
-  })">Let us know you're coming!</a>
+			<a id="joinUsRsvpLink" href="https://expressions.churchcenter.com/people/forms/951327"
+				rel="noopener noreferrer" data-open-in-church-center-modal="true"
+				class="btn-primary hero__rsvp-btn">Let us know you're coming!</a>
 		</div>
 	</section>
 	<script src="index.js"></script>
+	<!-- Google Analytics Tracking -->
 	<script>
 		const video = document.getElementById("introVideo");
 
@@ -387,6 +401,78 @@
 		);
 
 		observer.observe(video);
+	</script>
+	<script>
+		document.getElementById('introVideo').addEventListener('play', () => {
+			gtag('event', 'video_play', {
+				event_category: 'media',
+				event_label: 'Intro Video'
+			});
+		});
+
+	</script>
+	<script>
+		const trackableLinks = {
+			'heroRSVPLink': 'Top RSVP Button',
+			'joinUsRsvpLink': 'Bottom RSVP Button',
+			'scheduleRsvpLink': 'Schedule RSVP Button',
+			'heroVisitWebsite': 'Visit Website',
+			'heroAddress': 'Hero Address Link',
+			'rosebudCoffeeLink': 'Rosebud Coffee Link',
+			'coffeeWithACauseLink': 'Coffee With A Cause Link',
+			'scheduleDiscoverKidsLink': 'Discover Kids (Top)',
+			'learnMoreKidsLink': 'Discover Kids (Bottom)',
+			'latestSermonsLink': 'Watch Sermon',
+			'baptismLink': 'Sign Up for Baptism'
+		};
+
+		Object.entries(trackableLinks).forEach(([id, label]) => {
+			const el = document.getElementById(id);
+			if (el) {
+				el.addEventListener('click', () => {
+					gtag('event', 'click', {
+						event_category: 'engagement',
+						event_label: label,
+						transport_type: 'beacon'
+					});
+				});
+			}
+		});
+
+		// Optional fallback: Track all <a> clicks not listed above
+		document.querySelectorAll('a').forEach(link => {
+			if (!Object.keys(trackableLinks).includes(link.id)) {
+				link.addEventListener('click', () => {
+					gtag('event', 'click', {
+						event_category: 'link',
+						event_label: link.href,
+						transport_type: 'beacon'
+					});
+				});
+			}
+		});
+	</script>
+	<script>
+		window.addEventListener('scroll', () => {
+			const scrollDepth = Math.floor((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+
+			if (!window.scrollSent25 && scrollDepth >= 25) {
+				gtag('event', 'scroll', { 'event_label': '25%' });
+				window.scrollSent25 = true;
+			}
+			if (!window.scrollSent50 && scrollDepth >= 50) {
+				gtag('event', 'scroll', { 'event_label': '50%' });
+				window.scrollSent50 = true;
+			}
+			if (!window.scrollSent75 && scrollDepth >= 75) {
+				gtag('event', 'scroll', { 'event_label': '75%' });
+				window.scrollSent75 = true;
+			}
+			if (!window.scrollSent100 && scrollDepth >= 100) {
+				gtag('event', 'scroll', { 'event_label': '100%' });
+				window.scrollSent100 = true;
+			}
+		});
 	</script>
 </body>
 <footer class="section">
