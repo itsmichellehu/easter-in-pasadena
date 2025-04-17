@@ -108,6 +108,7 @@ $hero-spacing: 2rem;
 		}
 
 		@include breakpoint(med) {
+			margin: 2rem 0;
 			background: linear-gradient(
 					90deg,
 					rgba(91, 99, 209, 0) 5.5%,
@@ -121,6 +122,10 @@ $hero-spacing: 2rem;
 			a {
 				font-size: 1.5rem;
 			}
+		}
+
+		@include breakpoint(lg) {
+			margin: 2.5rem 0;
 		}
 	}
 
