@@ -1,54 +1,31 @@
 @use "@scss/abstracts/all-abstracts" as *;
 
-.easter-events {
-	width: 100%;
-
-	&__wrapper {
-		text-align: center;
-		width: 90%;
-		margin: auto;
+#event-details {
+	padding-top: 3rem;
+	> .section-content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 2rem;
-	}
-	//
-	// 	&__event-container {
-	// 		padding: 1rem;
-	// 		background-image: url("assets/images/bg-paper.webp");
-	// 	}
-
-	&__content {
-		// color: $off-black;
-		display: flex;
-		flex-direction: column;
-		margin: 0 auto;	
 		gap: 1rem;
-		align-items: center;
+		text-align: center;
 
-		@include breakpoint(xl) {
-			display: grid;
-			grid-template-columns: 3fr 2fr;
-			gap: 2rem;
-			align-items: flex-start;
+		@include breakpoint(med) {
+			flex-direction: row;
+			align-items: start;
+			gap: 3rem;
+			padding-top: 4rem;
 		}
 	}
+}
 
-	&__image {
-		flex: 1;
-		img {
-			margin-bottom: 1rem;
-			width: 100%;
-			border-radius: 0.25rem;
-			box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-		}
-	}
+.intro-video__wrapper {
+	width: unset;
+	flex: 1;
+}
 
-	&__details {
-		flex: 1;
-		padding: 1.5rem;
-		text-align: left;
-	}
+.event-details {
+	width: 100%;
+	position: relative;
 
 	&__heading {
 		font-size: 2.75rem;
@@ -62,9 +39,12 @@
 		}
 	}
 
-	&__intro {
+	&__intro--old,
+	&__intro--new {
 		font-size: 1.125rem;
+		font-weight: 400;
 		margin-bottom: 1.5rem;
+		text-align: center;
 		// color: #333;
 
 		strong {
@@ -73,10 +53,21 @@
 		}
 	}
 
-	&__info {
+	&__intro--old {
+		opacity: 0.5;
+	}
+
+	&__intro--new {
+		align-self: center;
+	}
+
+	&__list {
 		list-style: none;
 		padding: 0;
 		font-size: 1rem;
+		padding: 1.5rem;
+		text-align: left;
+		width: 100%;
 
 		li {
 			display: flex;
@@ -120,22 +111,17 @@
 		}
 	}
 
+	&__intro--headline {
+		font-size: 1.35rem;
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+		text-align: center;
+	}
+
 	@include breakpoint(lg) {
-		p,
-		h2 {
+		p {
 			text-align: left;
 		}
-
-		&__wrapper {
-			display: grid;
-			gap: 4rem;
-			grid-template-columns: 2fr 1fr;
-			align-items: start;
-		}
-		//
-		// 		&__event-container {
-		// 			padding: 3rem;
-		// 		}
 
 		&__heading {
 			font-family: Poppins;
@@ -157,6 +143,10 @@
 			padding: 0;
 		}
 
+		&__list {
+			width: fit-content;
+		}
+
 		&__intro {
 			font-size: 1.35rem;
 		}
@@ -175,7 +165,7 @@
 
 // ===== Pre-Easter Event Cards =====
 
-.pre-events {
+.easter-socials {
 	// margin-top: 2rem;
 
 	&__heading {
@@ -210,6 +200,12 @@
 		// 		}
 	}
 
+	@include breakpoint(lg) {
+		&__content-wrapper {
+			display: flex;
+		}
+	}
+
 	&__desc {
 		font-size: 0.95rem;
 		color: #444;
@@ -235,6 +231,7 @@
 		margin: auto;
 		margin-bottom: 1rem;
 		max-width: 30rem;
+		opacity: 0.75;
 
 		p {
 			margin-bottom: 0;
@@ -282,5 +279,13 @@
 		&__card {
 			gap: 1.5rem;
 		}
+	}
+}
+
+.intro-text-wrapper {
+	margin-bottom: 2rem;
+
+	@include breakpoint(lg) {
+		flex: 1;
 	}
 }
